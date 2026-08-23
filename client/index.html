@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bar Los Amigos | Inicio</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Modular CSS Architecture -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
+
 <body>
-     <!-- secciones aquí -->
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="#" class="navbar-brand text-primary">los<span
+                    style="color: var(--color-text-main);">Amigos</span></a>
+
+            <nav>
+                <ul class="navbar-nav">
+                    <li><a href="#" class="navbar-link">Inicio</a></li>
+                    <li><a href="#reservas" class="navbar-link">Reservas</a></li>
+                    <li><a href="#menu" class="navbar-link">Menú</a></li>
+                    <li><a href="#contacto" class="navbar-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Información de Contacto -->
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📍 Calle Falsa 123, Ciudad</p>
+                    <p>📞 +123 456 7890</p>
+                    <p>✉️ info@barlogo.com</p>
+                </div>
+
+                <!-- Horarios -->
+                <div class="footer-section">
+                    <h3>Horarios</h3>
+                    <p>Lun - Jue: 18:00 - 02:00</p>
+                    <p>Vie - Sáb: 18:00 - 04:00</p>
+                    <p>Domingo: Cerrado</p>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Instagram</a></li>
+                        <li><a href="#" class="footer-link">Facebook</a></li>
+                        <li><a href="#" class="footer-link">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bar Los Amigos. Todos los derechos reservados.</p>
+                <div style="display: flex; gap: var(--spacing-md);">
+                    <a href="#" class="footer-link">Términos</a>
+                    <a href="#" class="footer-link">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

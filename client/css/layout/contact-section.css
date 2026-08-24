@@ -1,0 +1,98 @@
+/* css/layout/contact-section.css */
+.contact-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle at center, var(--color-bg-surface) 0%, var(--color-bg-base) 100%);
+    min-height: 100vh;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--color-bg-base);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: var(--spacing-xl) var(--spacing-lg);
+    border: 1px solid var(--color-border);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-header h2 {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    margin-top: 0;
+    font-weight: 800;
+}
+
+.section-header p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Grillas para pantallas grandes */
+.row-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.form-actions {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-actions .btn {
+    width: 100%;
+}
+
+/* Enfoque Mobile-First -> Breakpoints para Tablet / Desktop */
+@media (min-width: 600px) {
+    .contact-section {
+        padding: 4rem var(--spacing-md);
+    }
+
+    .contact-container {
+        padding: 3rem;
+    }
+
+    .row-group {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+    }
+    
+    .row-group .input-wrapper {
+        flex: 1;
+    }
+
+    /* Grilla de CSS para el form a partir de tablet */
+    .form-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 var(--spacing-lg);
+    }
+
+    /* Elementos que ocupan toda la fila */
+    .input-wrapper:nth-child(2), /* nombre completo */
+    .row-group, /* contenedor de fecha/hora */
+    .full-width {
+        grid-column: 1 / -1;
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+
+    .form-actions .btn {
+        width: auto;
+        min-width: 250px;
+    }
+}

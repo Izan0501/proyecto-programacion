@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto y Reservas - Nuestro Bar</title>
+    <!-- Estilos modulares -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/layout/contact-section.css">
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-     <!-- secciones aquí -->
+    <main>
+        <section id="contacto-reservas" class="contact-section">
+            <div class="contact-container">
+                <header class="section-header">
+                    <h2>Contacto y Reservas</h2>
+                    <p>Asegura tu lugar en nuestra barra o ponte en contacto con nosotros para eventos especiales.</p>
+                </header>
+
+                <form action="#" method="POST" class="reservation-form" aria-labelledby="form-title">
+                    <fieldset class="form-group">
+                        <legend id="form-title" class="sr-only">Información de Reserva</legend>
+
+                        <div class="input-wrapper">
+                            <label for="full-name">Nombre completo <span class="required" aria-hidden="true">*</span></label>
+                            <input type="text" id="full-name" name="full-name" required minlength="3" placeholder="Ej. Juan Pérez" autocomplete="name">
+                            <span class="error-message" aria-live="polite">Por favor, ingresa tu nombre (mín. 3 caracteres).</span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="email">Correo electrónico <span class="required" aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com" autocomplete="email">
+                            <span class="error-message" aria-live="polite">Ingresa un correo electrónico válido.</span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="phone">Teléfono <span class="required" aria-hidden="true">*</span></label>
+                            <input type="tel" id="phone" name="phone" required pattern="[0-9]{8,15}" placeholder="Ej. 1123456789">
+                            <span class="error-message" aria-live="polite">Ingresa un teléfono válido (solo números, 8-15 dígitos).</span>
+                        </div>
+
+                        <div class="row-group">
+                            <div class="input-wrapper">
+                                <label for="date">Fecha <span class="required" aria-hidden="true">*</span></label>
+                                <input type="date" id="date" name="date" required>
+                                <span class="error-message" aria-live="polite">Selecciona una fecha para tu reserva.</span>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="time">Hora <span class="required" aria-hidden="true">*</span></label>
+                                <input type="time" id="time" name="time" required>
+                                <span class="error-message" aria-live="polite">Selecciona la hora de llegada.</span>
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="guests">Número de personas <span class="required" aria-hidden="true">*</span></label>
+                            <select id="guests" name="guests" required>
+                                <option value="" disabled selected>Selecciona cantidad</option>
+                                <option value="1">1 persona</option>
+                                <option value="2">2 personas</option>
+                                <option value="3">3 personas</option>
+                                <option value="4">4 personas</option>
+                                <option value="5">5 personas</option>
+                                <option value="6">6 o más personas</option>
+                            </select>
+                            <span class="error-message" aria-live="polite">Selecciona la cantidad de personas.</span>
+                        </div>
+
+                        <div class="input-wrapper full-width">
+                            <label for="message">Mensaje adicional o peticiones especiales</label>
+                            <textarea id="message" name="message" rows="4" placeholder="¿Algún requerimiento dietético o celebración especial?"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

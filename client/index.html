@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description"
+        content="Sistema de reservas para el mejor bar de la ciudad. Disfruta de la mejor experiencia nocturna.">
+    <title>Bar - Inicio</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Modulares CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
+
 <body>
-     <!-- secciones aquí -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero__content">
+                <h1 id="hero-title" class="hero__title">Descubre la Mejor Experiencia Nocturna</h1>
+                <p class="hero__subtitle">Cócteles de autor, un ambiente inigualable y momentos inolvidables. Asegura tu
+                    lugar con nosotros y vive la noche al máximo.</p>
+                <div class="hero__cta-group">
+                    <a href="#reservas" class="btn btn--primary" aria-label="Ir a la sección de reservas">Reservar
+                        ahora</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="nosotros" class="about" aria-labelledby="about-title">
+            <div class="container about__wrapper">
+                <div class="about__content">
+                    <h2 id="about-title" class="about__title">Nuestra Historia</h2>
+                    <p class="about__text">Fundado con la pasión de ofrecer un espacio único, nuestro bar es mucho más
+                        que un lugar para tomar una copa. Somos creadores de experiencias, combinando la mejor mixología
+                        con un servicio excepcional.</p>
+                    <p class="about__text">Nuestra misión es lograr que cada visita se sienta como una celebración. Ven
+                        a relajarte, conectarte con amigos y disfrutar de nuestra cuidada selección de bebidas en un
+                        ambiente vibrante.</p>
+                </div>
+                <div class="about__image-wrapper">
+                    <!-- Imagen temática -->
+                    <img src="https://images.unsplash.com/photo-1574096079513-d8259312b785?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Bartender preparando un cóctel artesanal en la barra" class="about__image" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
+
 </html>

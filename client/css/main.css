@@ -132,4 +132,22 @@ ul {
   .hero-title {
     font-size: 3rem;
   }
+  .hero-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+  }
+  .hero-tags {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .btn-primary {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+  }
 }

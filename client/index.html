@@ -1,91 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bar Los Amigos | Inicio</title>
-
-    <link rel="icon" type="image/png" href="./img/logo3.png">
-
-    <!-- Google Fonts: Inter -->
+    <title>Los Amigos Bar | Inicio</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Modular CSS Architecture -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/newsletter.css">
 </head>
-
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-    <header class="navbar">
-        <div class="container navbar__inner">
-            <a href="#" class="navbar__brand text-primary" aria-label="Inicio Bar Los Amigos">
-                los<span class="navbar__brand-highlight">Amigos</span>
-            </a>
-
-            <nav class="navbar__nav" aria-label="Navegación principal">
-                <ul class="navbar__list">
-                    <li class="navbar__item"><a href="#" class="navbar__link navbar__link--active"
-                            aria-current="page">Inicio</a></li>
-                    <li class="navbar__item"><a href="#reservas" class="navbar__link">Reservas</a></li>
-                    <li class="navbar__item"><a href="#menu" class="navbar__link">Menú</a></li>
-                    <li class="navbar__item"><a href="#contacto" class="navbar__link">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="footer" id="contacto">
-        <div class="container">
-            <div class="footer__grid">
-                <!-- Información de Contacto -->
-                <div class="footer__section">
-                    <h3 class="footer__title">Contacto</h3>
-                    <p class="footer__text">📍 junin 471, San Miguel de Tucumán</p>
-                    <p class="footer__text">📞 +381 657 5477</p>
-                    <p class="footer__text">✉️ <a href="mailto:Barlosamigos@gmail.com"
-                            class="footer__link">Barlosamigos@gmail.com</a></p>
+    <!-- Header & Hero Wrapper -->
+    <div class="site-header">
+        <div class="header-content">
+            
+            <!-- Top Info Bar -->
+            <div class="top-bar">
+                <div class="top-bar-left">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Av. Siempre Viva 123, San Miguel de Tucumán</span>
                 </div>
-
-                <!-- Horarios -->
-                <div class="footer__section">
-                    <h3 class="footer__title">Horarios</h3>
-                    <p class="footer__text">Lun - Jue: 18:00 - 02:00</p>
-                    <p class="footer__text">Vie - Sáb: 18:00 - 04:00</p>
-                    <p class="footer__text">Domingo: Cerrado</p>
+                <div class="top-bar-center">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Mar - Dom: 18:00 - 02:00</span>
                 </div>
+                <div class="top-bar-right">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>381 123 4567</span>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Redes Sociales -->
-                <div class="footer__section">
-                    <h3 class="footer__title">Síguenos</h3>
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#" class="footer__link">Instagram</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Facebook</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Twitter</a></li>
+            <!-- Logo Section -->
+            <div class="header-logo-section">
+                <div class="nav-logo-container">
+                    <i class="fa-solid fa-champagne-glasses nav-logo-icon"></i>
+                    <div class="nav-logo-text">Los<br>Amigos</div>
+                    <div class="nav-logo-subtext">· BAR ·</div>
+                </div>
+            </div>
+
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="nav-container">
+                    <ul class="nav-menu">
+                        <li><a href="#" class="nav-link active">Inicio</a></li>
+                        <li><a href="#" class="nav-link">Carta</a></li>
+                        <li><a href="#" class="nav-link">Galería</a></li>
+                        <li><a href="#" class="nav-link">Eventos</a></li>
+                        <li><a href="#" class="nav-link">Nosotros</a></li>
+                        <li><a href="#" class="nav-link">Reservas</a></li>
+                        <li><a href="#" class="nav-link">Contacto</a></li>
+                        <li>
+                            <button class="btn-outline">
+                                <i class="fa-regular fa-calendar" style="margin-right: 5px;"></i> Reservar
+                            </button>
+                        </li>
                     </ul>
                 </div>
-            </div>
+            </nav>
 
-            <!-- Copyright -->
-            <div class="footer__bottom">
-                <p class="footer__text">&copy; 2026 Bar Los Amigos. Todos los derechos reservados.</p>
-                <div class="footer__legal">
-                    <a href="#" class="footer__link">Términos</a>
-                    <a href="#" class="footer__link">Privacidad</a>
+            <!-- Main Hero Section -->
+            <main class="hero-section">
+                <div class="hero-subtitle">· Buenos Momentos ·</div>
+                <h1 class="hero-title">Grandes Amigos</h1>
+                <div class="hero-tags">MÚSICA · TRAGOS · BUENA VIBRA</div>
+                <button class="btn-primary">Ver Carta</button>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            
+            <!-- Column 1: Description -->
+            <div class="footer-col">
+                <div class="footer-logo">LOS AMIGOS</div>
+                <span class="footer-logo-sub">· BAR ·</span>
+                <p class="footer-text">Un lugar donde la buena vibra, los tragos y los amigos se encuentran. Te esperamos.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
+
+            <!-- Column 2: Links -->
+            <div class="footer-col">
+                <h4 class="footer-col-title">Enlaces</h4>
+                <div class="footer-nav">
+                    <a href="#">Inicio</a>
+                    <a href="#">Carta</a>
+                    <a href="#">Galería</a>
+                    <a href="#">Eventos</a>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Reservas</a>
+                    <a href="#">Contacto</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Schedule -->
+            <div class="footer-col">
+                <h4 class="footer-col-title">Horarios</h4>
+                <div class="footer-contact-item">
+                    <i class="fa-regular fa-clock"></i>
+                    <div>
+                        <p class="footer-text" style="margin-bottom:0">Martes a Domingo</p>
+                        <p class="footer-text">18:00 - 02:00</p>
+                    </div>
+                </div>
+                <div class="footer-contact-item" style="margin-top: 5px;">
+                    <div style="margin-left: 24px;">
+                        <p class="footer-text" style="margin-bottom:0">Lunes</p>
+                        <p class="footer-text">Cerrado</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-col">
+                <h4 class="footer-col-title">Contacto</h4>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="footer-text" style="margin-bottom:0">Av. Siempre Viva 123,<br>San Miguel de Tucumán</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p class="footer-text" style="margin-bottom:0">381 123 4567</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p class="footer-text" style="margin-bottom:0">hola@losamigosbar.com.ar</p>
+                </div>
+            </div>
+
+            <!-- Column 5: Newsletter -->
+            <div class="footer-col">
+                <h4 class="footer-col-title">Newsletter</h4>
+                <p class="footer-text">Suscribite y enterate de eventos y promociones exclusivas.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu e-mail" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">Suscribirme</button>
+                </form>
+            </div>
+            
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Los Amigos Bar. Todos los derechos reservados.</p>
         </div>
     </footer>
 
 </body>
-
 </html>

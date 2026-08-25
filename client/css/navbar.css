@@ -1,113 +1,98 @@
-/* ==========================================================================
-   Navbar Component (BEM Methodology)
-   ========================================================================== */
+.header-logo-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 20px;
+}
 
-/* 🔹 Contenedor Principal (Block) */
+.nav-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-gold);
+  background: radial-gradient(circle, rgba(15,15,15,0.95) 0%, rgba(0,0,0,1) 100%);
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.nav-logo-icon {
+  font-size: 2.2rem;
+  color: var(--accent-gold);
+  margin-bottom: 8px;
+}
+
+.nav-logo-text {
+  font-family: var(--font-secondary);
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-logo-subtext {
+  font-size: 0.55rem;
+  letter-spacing: 4px;
+  color: var(--accent-gold);
+  margin-top: 8px;
+}
+
 .navbar {
-    background-color: var(--color-background-lighter);
-    border-bottom: 1px solid var(--color-border);
-    position: sticky;
-    top: 0;
-    z-index: var(--z-index-navbar);
-    padding: var(--spacing-md) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 40px 25px;
+  border-bottom: 1px solid var(--border-color);
 }
 
-/* 🔹 Layout Interno (Element) */
-.navbar__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
 }
 
-/* 🔹 Marca/Logo (Element) */
-.navbar__brand {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    border-radius: 4px;
+.nav-menu {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.navbar__brand:focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 4px;
+.nav-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  position: relative;
+  padding-bottom: 5px;
 }
 
-.navbar__brand-highlight {
-    color: var(--color-text-main);
+.nav-link:hover {
+  color: var(--accent-gold);
 }
 
-/* 🔹 Navegación y Lista (Elements) */
-.navbar__nav {
-    display: flex;
+.nav-link.active {
+  color: var(--accent-gold);
 }
 
-.navbar__list {
-    display: flex;
-    gap: var(--spacing-xl);
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent-gold);
 }
 
-/* 🔹 Ítem de la lista (Element) */
-.navbar__item {
-    display: flex;
-    align-items: center;
-}
-
-/* 🔹 Enlace (Element) */
-.navbar__link {
-    font-size: 1rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    position: relative;
-    padding: var(--spacing-xs) 0;
-    color: var(--color-text-main);
-    border-radius: 2px;
-}
-
-/* Micro-animación al pasar el mouse: subrayado */
-.navbar__link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color-primary);
-    transition: width 0.3s ease;
-}
-
-/* Interacciones (Hover / Focus) */
-.navbar__link:hover,
-.navbar__link:focus-visible {
-    color: var(--color-primary);
-    outline: none;
-}
-
-.navbar__link:hover::after,
-.navbar__link:focus-visible::after,
-.navbar__link--active::after {
-    width: 100%;
-}
-
-.navbar__link:focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 6px;
-}
-
-/* 🔹 Enlace Activo (Modifier) */
-.navbar__link--active {
-    color: var(--color-primary);
-    font-weight: 600;
-}
-
-/* 🔹 Responsividad (Media Queries) */
-@media (max-width: 768px) {
-    /* Ocultar menú en pantallas pequeñas (preparado para hamburguesa) */
-    .navbar__nav {
-        display: none;
-    }
+@media (max-width: 900px) {
+  .nav-menu { gap: 15px; }
+  .navbar { padding: 15px 20px; }
 }

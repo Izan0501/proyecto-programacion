@@ -35,6 +35,19 @@
 
 body {
     background-color: var(--color-background-dark);
+    /* 🔹 Fondo de bar elegante con gradiente oscuro para legibilidad (Opacidad/Contraste) */
+    background-image: 
+        linear-gradient(
+            to bottom,
+            rgba(18, 18, 18, 0.90),
+            rgba(18, 18, 18, 0.95)
+        ),
+        url('../img/bar-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
     color: var(--color-text-main);
     font-family: var(--font-primary);
     line-height: 1.6;

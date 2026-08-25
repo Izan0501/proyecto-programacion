@@ -25,16 +25,18 @@
 
     <!-- ================= NAVBAR ================= -->
     <header class="navbar">
-        <div class="container navbar-inner">
-            <a href="#" class="navbar-brand text-primary">los<span
-                    style="color: var(--color-text-main);">Amigos</span></a>
+        <div class="container navbar__inner">
+            <a href="#" class="navbar__brand text-primary" aria-label="Inicio Bar Los Amigos">
+                los<span class="navbar__brand-highlight">Amigos</span>
+            </a>
 
-            <nav>
-                <ul class="navbar-nav">
-                    <li><a href="#" class="navbar-link">Inicio</a></li>
-                    <li><a href="#reservas" class="navbar-link">Reservas</a></li>
-                    <li><a href="#menu" class="navbar-link">Menú</a></li>
-                    <li><a href="#contacto" class="navbar-link">Contacto</a></li>
+            <nav class="navbar__nav" aria-label="Navegación principal">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="#" class="navbar__link navbar__link--active"
+                            aria-current="page">Inicio</a></li>
+                    <li class="navbar__item"><a href="#reservas" class="navbar__link">Reservas</a></li>
+                    <li class="navbar__item"><a href="#menu" class="navbar__link">Menú</a></li>
+                    <li class="navbar__item"><a href="#contacto" class="navbar__link">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,40 +46,41 @@
     <!-- ================= FOOTER ================= -->
     <footer class="footer" id="contacto">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer__grid">
                 <!-- Información de Contacto -->
-                <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <p>📍 Calle Falsa 123, Ciudad</p>
-                    <p>📞 +123 456 7890</p>
-                    <p>✉️ info@barlogo.com</p>
+                <div class="footer__section">
+                    <h3 class="footer__title">Contacto</h3>
+                    <p class="footer__text">📍 Calle Falsa 123, Ciudad</p>
+                    <p class="footer__text">📞 +123 456 7890</p>
+                    <p class="footer__text">✉️ <a href="mailto:info@barlogo.com"
+                            class="footer__link">info@barlogo.com</a></p>
                 </div>
 
                 <!-- Horarios -->
-                <div class="footer-section">
-                    <h3>Horarios</h3>
-                    <p>Lun - Jue: 18:00 - 02:00</p>
-                    <p>Vie - Sáb: 18:00 - 04:00</p>
-                    <p>Domingo: Cerrado</p>
+                <div class="footer__section">
+                    <h3 class="footer__title">Horarios</h3>
+                    <p class="footer__text">Lun - Jue: 18:00 - 02:00</p>
+                    <p class="footer__text">Vie - Sáb: 18:00 - 04:00</p>
+                    <p class="footer__text">Domingo: Cerrado</p>
                 </div>
 
                 <!-- Redes Sociales -->
-                <div class="footer-section">
-                    <h3>Síguenos</h3>
-                    <ul class="footer-list">
-                        <li><a href="#" class="footer-link">Instagram</a></li>
-                        <li><a href="#" class="footer-link">Facebook</a></li>
-                        <li><a href="#" class="footer-link">Twitter</a></li>
+                <div class="footer__section">
+                    <h3 class="footer__title">Síguenos</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Instagram</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Facebook</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Twitter</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Copyright -->
-            <div class="footer-bottom">
-                <p>&copy; 2026 Bar Los Amigos. Todos los derechos reservados.</p>
-                <div style="display: flex; gap: var(--spacing-md);">
-                    <a href="#" class="footer-link">Términos</a>
-                    <a href="#" class="footer-link">Privacidad</a>
+            <div class="footer__bottom">
+                <p class="footer__text">&copy; 2026 Bar Los Amigos. Todos los derechos reservados.</p>
+                <div class="footer__legal">
+                    <a href="#" class="footer__link">Términos</a>
+                    <a href="#" class="footer__link">Privacidad</a>
                 </div>
             </div>
         </div>

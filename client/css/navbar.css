@@ -1,7 +1,8 @@
 /* ==========================================================================
-   Navbar Component
+   Navbar Component (BEM Methodology)
    ========================================================================== */
-/* Estilos principales del contenedor Navbar */
+
+/* 🔹 Contenedor Principal (Block) */
 .navbar {
     background-color: var(--color-background-lighter);
     border-bottom: 1px solid var(--color-border);
@@ -11,40 +12,64 @@
     padding: var(--spacing-md) 0;
 }
 
-/* Layout interno del header */
-.navbar-inner {
+/* 🔹 Layout Interno (Element) */
+.navbar__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Estilo de la marca/logo */
-.navbar-brand {
+/* 🔹 Marca/Logo (Element) */
+.navbar__brand {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    border-radius: 4px;
 }
 
+.navbar__brand:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
 
-/* Lista de navegación en escritorio */
-.navbar-nav {
+.navbar__brand-highlight {
+    color: var(--color-text-main);
+}
+
+/* 🔹 Navegación y Lista (Elements) */
+.navbar__nav {
+    display: flex;
+}
+
+.navbar__list {
     display: flex;
     gap: var(--spacing-xl);
 }
 
-/* Estilo de los enlaces de navegación */
-.navbar-link {
+/* 🔹 Ítem de la lista (Element) */
+.navbar__item {
+    display: flex;
+    align-items: center;
+}
+
+/* 🔹 Enlace (Element) */
+.navbar__link {
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     position: relative;
     padding: var(--spacing-xs) 0;
+    color: var(--color-text-main);
+    border-radius: 2px;
 }
 
 /* Micro-animación al pasar el mouse: subrayado */
-.navbar-link::after {
+.navbar__link::after {
     content: '';
     position: absolute;
     width: 0;
@@ -55,18 +80,34 @@
     transition: width 0.3s ease;
 }
 
-.navbar-link:hover {
+/* Interacciones (Hover / Focus) */
+.navbar__link:hover,
+.navbar__link:focus-visible {
     color: var(--color-primary);
+    outline: none;
 }
 
-.navbar-link:hover::after {
+.navbar__link:hover::after,
+.navbar__link:focus-visible::after,
+.navbar__link--active::after {
     width: 100%;
 }
 
-/* Responsividad: ocultar menú en pantallas pequeñas 
-    normalmente se reemplaza por un menú hamburguesa */
+.navbar__link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 6px;
+}
+
+/* 🔹 Enlace Activo (Modifier) */
+.navbar__link--active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* 🔹 Responsividad (Media Queries) */
 @media (max-width: 768px) {
-    .navbar-nav {
+    /* Ocultar menú en pantallas pequeñas (preparado para hamburguesa) */
+    .navbar__nav {
         display: none;
     }
 }

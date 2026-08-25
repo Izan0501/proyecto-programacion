@@ -1,57 +1,81 @@
 /* ==========================================================================
-   Footer Component
+   Footer Component (BEM Methodology)
    ========================================================================== */
 
+/* 🔹 Contenedor Principal (Block) */
 .footer {
     background-color: var(--color-background-lighter);
     border-top: 1px solid var(--color-border);
     padding: var(--spacing-2xl) 0 var(--spacing-lg) 0;
-    margin-top: auto; /* Ensure it stays at the bottom when main content is short */
+    margin-top: auto; /* Asegura que se quede abajo si el contenido principal es corto */
 }
 
-/* Main Grid Layout for Footer Content */
-.footer-grid {
+/* 🔹 Layout de Cuadrícula Principal (Element) */
+.footer__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-2xl);
 }
 
-/* Footer Section Styling */
-.footer-section h3 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-text-main);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.footer-section p {
-    color: var(--color-text-muted);
-    margin-bottom: var(--spacing-sm);
-    font-size: 0.95rem;
-}
-
-/* Footer Lists (e.g. Socials, Quick Links) */
-.footer-list {
+/* 🔹 Sección de Footer (Element) */
+.footer__section {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
 }
 
-.footer-link {
+/* 🔹 Título de Sección (Element) */
+.footer__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 🔹 Texto Informativo (Element) */
+.footer__text {
     color: var(--color-text-muted);
     font-size: 0.95rem;
-    transition: color 0.3s ease;
 }
 
-.footer-link:hover {
+/* 🔹 Listas (Element) */
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.footer__item {
+    display: flex;
+}
+
+/* 🔹 Enlaces (Element) */
+.footer__link {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
     color: var(--color-primary);
+    transform: translateX(4px);
+    outline: none;
 }
 
-/* Bottom Copyright Area */
-.footer-bottom {
+.footer__link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+    transform: none; /* Previene movimientos extraños con outline */
+}
+
+/* 🔹 Área Inferior / Copyright (Element) */
+.footer__bottom {
     border-top: 1px solid var(--color-border);
     padding-top: var(--spacing-lg);
     display: flex;
@@ -61,9 +85,34 @@
     font-size: 0.875rem;
 }
 
-/* Responsive adjustments for the bottom area */
+/* 🔹 Ícono de Copa Estilizado (Inyectado sin tocar HTML) */
+.footer__bottom .footer__text {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.footer__bottom .footer__text::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    /* SVG de copa estilizada en dorado (d4af37) */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 15v7"/><path d="M12 15L22 4H2l10 11z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 🔹 Contenedor de Enlaces Legales (Element) */
+.footer__legal {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+/* 🔹 Responsividad (Media Queries) */
 @media (max-width: 768px) {
-    .footer-bottom {
+    .footer__bottom {
         flex-direction: column;
         gap: var(--spacing-md);
         text-align: center;

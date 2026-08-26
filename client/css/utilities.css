@@ -1,4 +1,4 @@
-/* Base Reset */
+﻿/* Base Reset */
 *,
 *::before,
 *::after {
@@ -12,7 +12,7 @@ body {
   font-size: var(--font-size-base);
   color: var(--color-text-main);
   line-height: 1.6;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-bg-base);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -69,4 +69,35 @@ picture {
   background-color: var(--color-primary-dark);
   outline: 2px solid var(--color-primary-dark);
   outline-offset: 2px;
+}
+
+/* Flexbox Alignments */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+/* Typography Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--color-primary);
 }

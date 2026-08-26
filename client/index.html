@@ -1,45 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Sistema de reservas para el mejor bar de la ciudad. Disfruta de la mejor experiencia nocturna.">
-    <title>Bar - Inicio</title>
+    <meta name="description" content="Los Amigos Bar - Reservas, cocteles y buena vibra en San Miguel de Tucuman.">
+    <title>Los Amigos Bar | Inicio</title>
 
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <!-- Modulares CSS -->
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Base / Variables -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/utilities.css">
-    <link rel="stylesheet" href="css/hero.css">
+
+    <!-- New DEV layout CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/newsletter.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/layout/contact-section.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/booking-section.css">
+    <link rel="stylesheet" href="css/booking-card.css">
+    <link rel="stylesheet" href="css/reservations-list.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="css/carousel.css">
+
+    <!-- HEAD branch CSS (menus, gallery, events) -->
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/reservas.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/events.css">
     <link rel="stylesheet" href="css/carta.css">
-</head>
 
+    <!-- Scripts -->
+    <script src="js/carousel.js" defer></script>
+</head>
 <body>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="container hero__content">
-                <h1 id="hero-title" class="hero__title">Descubre la Mejor Experiencia Nocturna</h1>
-                <p class="hero__subtitle">Cócteles de autor, un ambiente inigualable y momentos inolvidables. Asegura tu
-                    lugar con nosotros y vive la noche al máximo.</p>
-                <div class="hero__cta-group">
-                    <a href="#reservas" class="btn btn--primary" aria-label="Ir a la sección de reservas">Reservar
-                        ahora</a>
+    <!-- Header & Hero Wrapper -->
+    <div class="site-header">
+        <div class="header-content">
+            <header>
+                <!-- Top Info Bar -->
+                <div class="top-bar">
+                    <div class="top-bar-left">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Av. Siempre Viva 123, San Miguel de Tucumán</span>
+                    </div>
+                    <div class="top-bar-center">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Mar - Dom: 18:00 - 02:00</span>
+                    </div>
+                    <div class="top-bar-right">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>381 123 4567</span>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+
+                <!-- Logo Section -->
+                <div class="header-logo-section">
+                    <div class="nav-logo-container">
+                        <i class="fa-solid fa-champagne-glasses nav-logo-icon"></i>
+                        <div class="nav-logo-text">Los<br>Amigos</div>
+                        <div class="nav-logo-subtext">· BAR ·</div>
+                    </div>
+                </div>
+
+                <!-- Navbar -->
+                <nav class="navbar">
+                    <div class="nav-container">
+                        <button class="menu-toggle" aria-label="Abrir menú" id="menu-toggle">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <ul class="nav-menu" id="nav-menu">
+                            <li><a href="#" class="nav-link active">Inicio</a></li>
+                            <li><a href="#" class="nav-link">Carta</a></li>
+                            <li><a href="#" class="nav-link">Galería</a></li>
+                            <li><a href="#" class="nav-link">Eventos</a></li>
+                            <li><a href="#" class="nav-link">Nosotros</a></li>
+                            <li><a href="#contacto-reservas" class="nav-link">Reservas</a></li>
+                            <li><a href="#" class="nav-link">Contacto</a></li>
+                            <li>
+                                <button class="btn-outline">
+                                    <i class="fa-regular fa-calendar" style="margin-right: 5px;"></i> Reservar
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Main Hero Section -->
+            <main class="hero-section">
+                <p class="hero-subtitle">· Buenos Momentos ·</p>
+                <h1 class="hero-title">Grandes Amigos</h1>
+                <p class="hero-tags">MÚSICA · TRAGOS · BUENA VIBRA</p>
+                <button class="btn-primary">Ver Carta</button>
+            </main>
+        </div>
+    </div>
+
+    <main>
+
 
         <!-- About Us Section -->
         <section id="nosotros" class="about" aria-labelledby="about-title">
@@ -250,8 +326,317 @@
                 </div>
             </div>
         </section>
+        <section class="booking-section">
+            <header class="booking-section__header">
+                <!-- Optional section title, but cards have their own headers -->
+            </header>
+
+            <div class="booking-section__top-cards">
+                <!-- Card 1: Formulario de reserva -->
+                <div class="booking-card">
+                    <h3 class="booking-card__title">Haz tu reserva</h3>
+                    <form class="booking-card__form" action="#" method="POST" onsubmit="event.preventDefault();">
+                        <div class="booking-card__field">
+                            <label class="booking-card__label" for="res-name">Nombre completo</label>
+                            <input class="booking-card__input" type="text" id="res-name" name="res-name"
+                                placeholder="Ej. Juan Pérez" required>
+                        </div>
+
+                        <div class="booking-card__field">
+                            <label class="booking-card__label" for="res-phone">Teléfono</label>
+                            <input class="booking-card__input" type="tel" id="res-phone" name="res-phone"
+                                placeholder="Ej. +34 600 000 000" required>
+                        </div>
+
+                        <div class="booking-card__row">
+                            <div class="booking-card__field">
+                                <label class="booking-card__label" for="res-date">Fecha</label>
+                                <input class="booking-card__input" type="date" id="res-date" name="res-date" required>
+                            </div>
+                            <div class="booking-card__field">
+                                <label class="booking-card__label" for="res-time">Hora</label>
+                                <input class="booking-card__input" type="time" id="res-time" name="res-time" required>
+                            </div>
+                        </div>
+
+                        <div class="booking-card__field">
+                            <label class="booking-card__label" for="res-guests">Número de personas</label>
+                            <select class="booking-card__select" id="res-guests" name="res-guests" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="1">1 Persona</option>
+                                <option value="2">2 Personas</option>
+                                <option value="3">3 Personas</option>
+                                <option value="4">4 Personas</option>
+                                <option value="5+">5 o más Personas</option>
+                            </select>
+                        </div>
+
+                        <button class="booking-card__submit" type="submit">Reservar</button>
+                    </form>
+                </div>
+
+                <!-- Card 2: Reservas hechas -->
+                <div class="reservations-list">
+                    <h3 class="reservations-list__title">Reservas hechas</h3>
+                    <ul class="reservations-list__items">
+                        <li class="reservation-item">
+                            <div class="reservation-item__details">
+                                <span class="reservation-item__date-time">📅 12 Octubre, 2026 - 20:30</span>
+                                <span class="reservation-item__guests">👥 4 Personas</span>
+                            </div>
+                            <span class="reservation-item__status">Confirmada</span>
+                        </li>
+                        <li class="reservation-item">
+                            <div class="reservation-item__details">
+                                <span class="reservation-item__date-time">📅 15 Octubre, 2026 - 19:00</span>
+                                <span class="reservation-item__guests">👥 2 Personas</span>
+                            </div>
+                            <span class="reservation-item__status">Confirmada</span>
+                        </li>
+                        <li class="reservation-item">
+                            <div class="reservation-item__details">
+                                <span class="reservation-item__date-time">📅 20 Octubre, 2026 - 21:00</span>
+                                <span class="reservation-item__guests">👥 6 Personas</span>
+                            </div>
+                            <span class="reservation-item__status">Confirmada</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 3: Reseñas de clientes -->
+            <div class="reviews">
+                <h3 class="reviews__title">Reseñas de clientes</h3>
+                <div class="reviews__list">
+                    <div class="review-item">
+                        <div class="review-item__header">
+                            <div class="review-item__avatar">M</div>
+                            <div>
+                                <div class="review-item__author">María Gómez</div>
+                                <div class="review-item__rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-item__text">"Excelente servicio y un ambiente espectacular. La comida estaba deliciosa, definitivamente volveremos pronto."</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-item__header">
+                            <div class="review-item__avatar">C</div>
+                            <div>
+                                <div class="review-item__author">Carlos Ruiz</div>
+                                <div class="review-item__rating">★★★★☆</div>
+                            </div>
+                        </div>
+                        <p class="review-item__text">"Muy buena atención por parte del personal. Hice la reserva en línea y todo estaba listo cuando llegamos."</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-item__header">
+                            <div class="review-item__avatar">L</div>
+                            <div>
+                                <div class="review-item__author">Laura Sánchez</div>
+                                <div class="review-item__rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-item__text">"Una experiencia inolvidable. El proceso de reserva fue facilísimo y el trato en el lugar superó mis expectativas."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel -->
+            <div class="carousel-wrapper">
+                <button class="carousel__button carousel__button--prev" aria-label="Previous slide">❮</button>
+                <div class="carousel" data-current-index="0">
+                    <div class="carousel__slide">
+                        <span class="carousel__image-placeholder"><img src="img/bar_1.png" alt="Bar1"></span>
+                    </div>
+                    <div class="carousel__slide">
+                        <span class="carousel__image-placeholder"><img src="img/bar_2.png" alt="Bar2"></span>
+                    </div>
+                    <div class="carousel__slide">
+                        <span class="carousel__image-placeholder"><img src="img/bar_3.png" alt="Bar3"></span>
+                    </div>
+                </div>
+                <button class="carousel__button carousel__button--next" aria-label="Next slide">❯</button>
+
+                <div class="carousel__dots">
+                    <button class="carousel__dot carousel__dot--active" aria-label="Go to slide 1"></button>
+                    <button class="carousel__dot" aria-label="Go to slide 2"></button>
+                    <button class="carousel__dot" aria-label="Go to slide 3"></button>
+                </div>
+            </div>
+        </section>
+        <!-- Contact & Reservation Form (from the new layout/contact-section) -->
+        <section id="contacto-reservas" class="contact-section">
+            <div class="contact-container">
+                <header class="section-header">
+                    <h2>Contacto y Reservas</h2>
+                    <p>Asegura tu lugar en nuestra barra o ponte en contacto con nosotros para eventos especiales.</p>
+                </header>
+
+                <form action="#" method="POST" class="reservation-form" aria-labelledby="form-title">
+                    <fieldset class="form-group">
+                        <legend id="form-title" class="sr-only">Información de Reserva</legend>
+
+                        <div class="input-wrapper">
+                            <label for="full-name">Nombre completo <span class="required" aria-hidden="true">*</span></label>
+                            <input type="text" id="full-name" name="full-name" required minlength="3" placeholder="Ej. Juan Pérez" autocomplete="name">
+                            <span class="error-message" aria-live="polite">Por favor, ingresa tu nombre (mín. 3 caracteres).</span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="email">Correo electrónico <span class="required" aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com" autocomplete="email">
+                            <span class="error-message" aria-live="polite">Ingresa un correo electrónico válido.</span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="phone">Teléfono <span class="required" aria-hidden="true">*</span></label>
+                            <input type="tel" id="phone" name="phone" required pattern="[0-9]{8,15}" placeholder="Ej. 1123456789">
+                            <span class="error-message" aria-live="polite">Ingresa un teléfono válido (solo números, 8-15 dígitos).</span>
+                        </div>
+
+                        <div class="row-group">
+                            <div class="input-wrapper">
+                                <label for="date">Fecha <span class="required" aria-hidden="true">*</span></label>
+                                <input type="date" id="date" name="date" required>
+                                <span class="error-message" aria-live="polite">Selecciona una fecha para tu reserva.</span>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="time">Hora <span class="required" aria-hidden="true">*</span></label>
+                                <input type="time" id="time" name="time" required>
+                                <span class="error-message" aria-live="polite">Selecciona la hora de llegada.</span>
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="guests">Número de personas <span class="required" aria-hidden="true">*</span></label>
+                            <select id="guests" name="guests" required>
+                                <option value="" disabled selected>Selecciona cantidad</option>
+                                <option value="1">1 persona</option>
+                                <option value="2">2 personas</option>
+                                <option value="3">3 personas</option>
+                                <option value="4">4 personas</option>
+                                <option value="5">5 personas</option>
+                                <option value="6">6 o más personas</option>
+                            </select>
+                            <span class="error-message" aria-live="polite">Selecciona la cantidad de personas.</span>
+                        </div>
+
+                        <div class="input-wrapper full-width">
+                            <label for="message">Mensaje adicional o peticiones especiales</label>
+                            <textarea id="message" name="message" rows="4" placeholder="¿Algún requerimiento dietético o celebración especial?"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 
-</body>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+
+            <!-- Column 1: Description -->
+            <section class="footer-col">
+                <h3 class="footer-logo">LOS AMIGOS</h3>
+                <span class="footer-logo-sub">· BAR ·</span>
+                <p class="footer-text">Un lugar donde la buena vibra, los tragos y los amigos se encuentran. Te esperamos.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </section>
+
+            <!-- Column 2: Links -->
+            <section class="footer-col">
+                <h4 class="footer-col-title">Enlaces</h4>
+                <nav class="footer-nav" aria-label="Navegación del pie de página">
+                    <a href="#">Inicio</a>
+                    <a href="#">Carta</a>
+                    <a href="#">Galería</a>
+                    <a href="#">Eventos</a>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Reservas</a>
+                    <a href="#">Contacto</a>
+                </nav>
+            </section>
+
+            <!-- Column 3: Schedule -->
+            <section class="footer-col">
+                <h4 class="footer-col-title">Horarios</h4>
+                <div class="footer-contact-item">
+                    <i class="fa-regular fa-clock"></i>
+                    <div>
+                        <p class="footer-text" style="margin-bottom:0">Martes a Domingo</p>
+                        <p class="footer-text">18:00 - 02:00</p>
+                    </div>
+                </div>
+                <div class="footer-contact-item" style="margin-top: 5px;">
+                    <div style="margin-left: 24px;">
+                        <p class="footer-text" style="margin-bottom:0">Lunes</p>
+                        <p class="footer-text">Cerrado</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Column 4: Contact -->
+            <section class="footer-col">
+                <h4 class="footer-col-title">Contacto</h4>
+                <address style="font-style: normal;">
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p class="footer-text" style="margin-bottom:0">Av. Siempre Viva 123,<br>San Miguel de Tucumán</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p class="footer-text" style="margin-bottom:0">381 123 4567</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p class="footer-text" style="margin-bottom:0">hola@losamigosbar.com.ar</p>
+                    </div>
+                </address>
+            </section>
+
+            <!-- Column 5: Newsletter -->
+            <section class="footer-col">
+                <h4 class="footer-col-title">Newsletter</h4>
+                <p class="footer-text">Suscribite y enterate de eventos y promociones exclusivas.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu e-mail" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">Suscribirme</button>
+                </form>
+            </section>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Los Amigos Bar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
 </html>

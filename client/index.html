@@ -1,11 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Booking Section Styles -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/booking-section.css">
+    <link rel="stylesheet" href="css/booking-card.css">
+    <link rel="stylesheet" href="css/reservations-list.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="css/carousel.css">
+
+    <!-- Carousel Script -->
+    <script src="js/carousel.js" defer></script>
 </head>
+
 <body>
-     <!-- secciones aquí -->
+    <section class="booking-section">
+        <header class="booking-section__header">
+            <!-- Optional section title, but cards have their own headers -->
+        </header>
+
+        <div class="booking-section__top-cards">
+            <!-- Card 1: Formulario de reserva -->
+            <div class="booking-card">
+                <h3 class="booking-card__title">Haz tu reserva</h3>
+                <form class="booking-card__form" action="#" method="POST" onsubmit="event.preventDefault();">
+                    <div class="booking-card__field">
+                        <label class="booking-card__label" for="res-name">Nombre completo</label>
+                        <input class="booking-card__input" type="text" id="res-name" name="res-name"
+                            placeholder="Ej. Juan Pérez" required>
+                    </div>
+
+                    <div class="booking-card__field">
+                        <label class="booking-card__label" for="res-phone">Teléfono</label>
+                        <input class="booking-card__input" type="tel" id="res-phone" name="res-phone"
+                            placeholder="Ej. +34 600 000 000" required>
+                    </div>
+
+                    <div class="booking-card__row">
+                        <div class="booking-card__field">
+                            <label class="booking-card__label" for="res-date">Fecha</label>
+                            <input class="booking-card__input" type="date" id="res-date" name="res-date" required>
+                        </div>
+                        <div class="booking-card__field">
+                            <label class="booking-card__label" for="res-time">Hora</label>
+                            <input class="booking-card__input" type="time" id="res-time" name="res-time" required>
+                        </div>
+                    </div>
+
+                    <div class="booking-card__field">
+                        <label class="booking-card__label" for="res-guests">Número de personas</label>
+                        <select class="booking-card__select" id="res-guests" name="res-guests" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="1">1 Persona</option>
+                            <option value="2">2 Personas</option>
+                            <option value="3">3 Personas</option>
+                            <option value="4">4 Personas</option>
+                            <option value="5+">5 o más Personas</option>
+                        </select>
+                    </div>
+
+                    <button class="booking-card__submit" type="submit">Reservar</button>
+                </form>
+            </div>
+
+            <!-- Card 2: Reservas hechas -->
+            <div class="reservations-list">
+                <h3 class="reservations-list__title">Reservas hechas</h3>
+                <ul class="reservations-list__items">
+                    <li class="reservation-item">
+                        <div class="reservation-item__details">
+                            <span class="reservation-item__date-time">📅 12 Octubre, 2026 - 20:30</span>
+                            <span class="reservation-item__guests">👥 4 Personas</span>
+                        </div>
+                        <span class="reservation-item__status">Confirmada</span>
+                    </li>
+                    <li class="reservation-item">
+                        <div class="reservation-item__details">
+                            <span class="reservation-item__date-time">📅 15 Octubre, 2026 - 19:00</span>
+                            <span class="reservation-item__guests">👥 2 Personas</span>
+                        </div>
+                        <span class="reservation-item__status">Confirmada</span>
+                    </li>
+                    <li class="reservation-item">
+                        <div class="reservation-item__details">
+                            <span class="reservation-item__date-time">📅 20 Octubre, 2026 - 21:00</span>
+                            <span class="reservation-item__guests">👥 6 Personas</span>
+                        </div>
+                        <span class="reservation-item__status">Confirmada</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 3: Reseñas de clientes -->
+        <div class="reviews">
+            <h3 class="reviews__title">Reseñas de clientes</h3>
+            <div class="reviews__list">
+                <div class="review-item">
+                    <div class="review-item__header">
+                        <div class="review-item__avatar">M</div>
+                        <div>
+                            <div class="review-item__author">María Gómez</div>
+                            <div class="review-item__rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-item__text">"Excelente servicio y un ambiente espectacular. La comida estaba
+                        deliciosa, definitivamente volveremos pronto."</p>
+                </div>
+                <div class="review-item">
+                    <div class="review-item__header">
+                        <div class="review-item__avatar">C</div>
+                        <div>
+                            <div class="review-item__author">Carlos Ruiz</div>
+                            <div class="review-item__rating">★★★★☆</div>
+                        </div>
+                    </div>
+                    <p class="review-item__text">"Muy buena atención por parte del personal. Hice la reserva en línea y
+                        todo estaba listo cuando llegamos."</p>
+                </div>
+                <div class="review-item">
+                    <div class="review-item__header">
+                        <div class="review-item__avatar">L</div>
+                        <div>
+                            <div class="review-item__author">Laura Sánchez</div>
+                            <div class="review-item__rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-item__text">"Una experiencia inolvidable. El proceso de reserva fue facilísimo y el
+                        trato en el lugar superó mis expectativas."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="carousel-wrapper">
+            <button class="carousel__button carousel__button--prev" aria-label="Previous slide">❮</button>
+            <div class="carousel" data-current-index="0">
+                <div class="carousel__slide">
+                    <span class="carousel__image-placeholder"><img src="img/bar_1.png" alt="Bar1"></span>
+                </div>
+                <div class="carousel__slide">
+                    <span class="carousel__image-placeholder"><img src="img/bar_2.png" alt="Bar2"></span>
+                </div>
+                <div class="carousel__slide">
+                    <span class="carousel__image-placeholder"><img src="img/bar_3.png" alt="Bar3"></span>
+                </div>
+            </div>
+            <button class="carousel__button carousel__button--next" aria-label="Next slide">❯</button>
+
+            <div class="carousel__dots">
+                <button class="carousel__dot carousel__dot--active" aria-label="Go to slide 1"></button>
+                <button class="carousel__dot" aria-label="Go to slide 2"></button>
+                <button class="carousel__dot" aria-label="Go to slide 3"></button>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>

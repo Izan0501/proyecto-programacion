@@ -1,11 +1,18 @@
-/* css/variables.css */
+﻿/* css/variables.css */
 :root {
     /* Paleta de colores Premium / Dark Mode Bar */
     --color-bg-base: #121212;
     --color-bg-surface: #1e1e1e;
     --color-bg-surface-hover: #2c2c2c;
     
-    --color-primary: #d4af37; /* Dorado metálico */
+    /* Colores del HEAD (para retrocompatibilidad) */
+    --color-bg-dark: #1e1e1e;
+    --color-bg-light: #121212;
+    --color-bg-muted: #1e1e1e; 
+    --color-text-inverse: #ffffff;
+    --color-primary-dark: #b5952f;
+    
+    --color-primary: #d4af37;
     --color-primary-hover: #f3c746;
     --color-primary-active: #b5952f;
     
@@ -17,12 +24,14 @@
     --color-border: #333333;
     --color-border-focus: var(--color-primary);
     
-    /* Tipografías */
-    --font-family-base: 'Outfit', system-ui, -apple-system, sans-serif;
+    /* Tipografias */
+    --font-family-base: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
     --font-size-lg: 1.25rem;
     --font-size-xl: 2rem;
+    --font-size-h1: clamp(2.5rem, 5vw, 4rem);
+    --font-size-h2: clamp(2rem, 4vw, 3rem);
     
     /* Espaciados */
     --spacing-xs: 0.25rem;
@@ -30,11 +39,15 @@
     --spacing-md: 1rem;
     --spacing-lg: 1.5rem;
     --spacing-xl: 2.5rem;
+    --spacing-xxl: 6rem;
     
     /* Radios y Sombras */
     --border-radius-sm: 4px;
     --border-radius-md: 8px;
     --border-radius-lg: 12px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
     
     --shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.3);
     --shadow-focus: 0 0 0 3px rgba(212, 175, 55, 0.2);
@@ -44,7 +57,6 @@
     --transition-base: 0.3s ease;
 }
 
-/* Reset básico para el contexto */
 body {
     background-color: var(--color-bg-base);
     color: var(--color-text-main);
@@ -58,7 +70,6 @@ body {
     box-sizing: inherit;
 }
 
-/* Clase de utilidad para accesibilidad (Screen Readers Only) */
 .sr-only {
     position: absolute;
     width: 1px;

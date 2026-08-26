@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Los Amigos Bar - Reservas, cocteles y buena vibra en San Miguel de Tucuman.">
     <title>Los Amigos Bar | Inicio</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Modular CSS Architecture (from new branch) -->
+    <!-- Base / Variables -->
     <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/utilities.css">
+
+    <!-- New DEV layout CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -23,8 +27,6 @@
     <link rel="stylesheet" href="css/components/forms.css">
     <link rel="stylesheet" href="css/components/buttons.css">
     <link rel="stylesheet" href="css/layout/contact-section.css">
-
-    <!-- CSS from old branch (for carousel, reviews, etc.) -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/booking-section.css">
     <link rel="stylesheet" href="css/booking-card.css">
@@ -32,10 +34,18 @@
     <link rel="stylesheet" href="css/reviews.css">
     <link rel="stylesheet" href="css/carousel.css">
 
+    <!-- HEAD branch CSS (menus, gallery, events) -->
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/carta.css">
+
     <!-- Scripts -->
     <script src="js/carousel.js" defer></script>
 </head>
 <body>
+
     <!-- Header & Hero Wrapper -->
     <div class="site-header">
         <div class="header-content">
@@ -104,8 +114,218 @@
         </div>
     </div>
 
-    <!-- Main Content Area -->
     <main>
+
+
+        <!-- About Us Section -->
+        <section id="nosotros" class="about" aria-labelledby="about-title">
+            <div class="container about__wrapper">
+                <div class="about__content">
+                    <h2 id="about-title" class="about__title">Nuestra Historia</h2>
+                    <p class="about__text">Fundado con la pasión de ofrecer un espacio único, nuestro bar es mucho más
+                        que un lugar para tomar una copa. Somos creadores de experiencias, combinando la mejor mixología
+                        con un servicio excepcional.</p>
+                    <p class="about__text">Nuestra misión es lograr que cada visita se sienta como una celebración. Ven
+                        a relajarte, conectarte con amigos y disfrutar de nuestra cuidada selección de bebidas en un
+                        ambiente vibrante.</p>
+                </div>
+                <div class="about__image-wrapper">
+                    <!-- Imagen temática -->
+                    <img src="img/about.jpg"
+                        alt="Bartender preparando un cóctel artesanal en la barra" class="about__image" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Carta de Tragos Section -->
+        <section id="menu" class="menu" aria-labelledby="menu-title">
+            <div class="container">
+                <h2 id="menu-title" class="menu__title">Nuestros Cócteles Destacados</h2>
+                <div class="carta__grid">
+                    <article class="carta-item">
+                        <img src="img/old-fashioned.jpg" alt="Old Fashioned" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Old Fashioned</h3>
+                                <span class="carta-item__price">$10</span>
+                            </div>
+                            <p class="carta-item__desc">Bourbon, azúcar, angostura y un toque de naranja. Un clásico atemporal.</p>
+                        </div>
+                    </article>
+                    <article class="carta-item">
+                        <img src="img/margarita.jpg" alt="Margarita Picante" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Margarita Picante</h3>
+                                <span class="carta-item__price">$9</span>
+                            </div>
+                            <p class="carta-item__desc">Tequila, Cointreau, lima fresca y un toque de jalapeño.</p>
+                        </div>
+                    </article>
+                    <article class="carta-item">
+                        <img src="img/espresso-martini.jpg" alt="Espresso Martini" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Espresso Martini</h3>
+                                <span class="carta-item__price">$11</span>
+                            </div>
+                            <p class="carta-item__desc">Vodka, licor de café y espresso recién preparado. Perfecto para despertar la noche.</p>
+                        </div>
+                    </article>
+                    <article class="carta-item">
+                        <img src="img/mojito.jpg" alt="Mojito Clásico" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Mojito Clásico</h3>
+                                <span class="carta-item__price">$9</span>
+                            </div>
+                            <p class="carta-item__desc">Ron blanco, menta fresca, lima, azúcar y soda. Refrescante y tropical.</p>
+                        </div>
+                    </article>
+                    <article class="carta-item">
+                        <img src="img/negroni.jpg" alt="Negroni" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Negroni</h3>
+                                <span class="carta-item__price">$12</span>
+                            </div>
+                            <p class="carta-item__desc">Gin, Campari y vermú dulce a partes iguales. Un clásico italiano inconfundible.</p>
+                        </div>
+                    </article>
+                    <article class="carta-item">
+                        <img src="img/pina-colada.jpg" alt="Piña Colada" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Piña Colada</h3>
+                                <span class="carta-item__price">$10</span>
+                            </div>
+                            <p class="carta-item__desc">Ron, crema de coco y jugo de piña batido con hielo. Sabor a paraíso.</p>
+                        </div>
+                    </article>
+                    <article class="carta-item">
+                        <img src="img/gin-tonic.jpg" alt="Gin Tonic Premium" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Gin Tonic Premium</h3>
+                                <span class="carta-item__price">$11</span>
+                            </div>
+                            <p class="carta-item__desc">Gin botánico, tónica premium, bayas de enebro y un twist de limón.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu de Comida Section -->
+        <section id="menu-comida" class="menu" aria-labelledby="menu-comida-title">
+            <div class="container">
+                <h2 id="menu-comida-title" class="menu__title">Carta de Comida</h2>
+                <div class="carta__grid">
+                    <article class="carta-item">
+                        <img src="img/hamburguesa.jpg" alt="Hamburguesa Artesanal" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Hamburguesa Artesanal</h3>
+                                <span class="carta-item__price">$12</span>
+                            </div>
+                            <p class="carta-item__desc">Doble carne, queso cheddar, bacon crujiente y cebolla caramelizada.</p>
+                        </div>
+                    </article>
+                    <article class="carta-item">
+                        <img src="img/papas.jpg" alt="Papas Rústicas" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Papas Rústicas</h3>
+                                <span class="carta-item__price">$7</span>
+                            </div>
+                            <p class="carta-item__desc">Papas al horno con pimentón, romero y salsa alioli de la casa.</p>
+                        </div>
+                    </article>
+                    <article class="carta-item">
+                        <img src="img/fiambre.jpg" alt="Tabla de Fiambres" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Tabla de Fiambres</h3>
+                                <span class="carta-item__price">$18</span>
+                            </div>
+                            <p class="carta-item__desc">Selección premium de jamón crudo, salame, quesos y aceitunas marinadas.</p>
+                        </div>
+                    </article>
+                    <article class="carta-item">
+                        <img src="img/pizza.jpg" alt="Pizza Margarita" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Pizza Margarita</h3>
+                                <span class="carta-item__price">$14</span>
+                            </div>
+                            <p class="carta-item__desc">Salsa de tomate casera, mozzarella fresca y hojas de albahaca.</p>
+                        </div>
+                    </article>
+                    <article class="carta-item">
+                        <img src="img/pollo.jpg" alt="Tiras de Pollo" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Tiras de Pollo</h3>
+                                <span class="carta-item__price">$9</span>
+                            </div>
+                            <p class="carta-item__desc">Crujientes tiras de pollo rebozadas acompañadas de salsa honey mustard.</p>
+                        </div>
+                    </article>
+                    <article class="carta-item">
+                        <img src="img/nachos.jpg" alt="Nachos Supremos" class="carta-item__image" loading="lazy">
+                        <div class="carta-item__content">
+                            <div class="carta-item__header">
+                                <h3 class="carta-item__title">Nachos Supremos</h3>
+                                <span class="carta-item__price">$11</span>
+                            </div>
+                            <p class="carta-item__desc">Totopos con queso fundido, guacamole, pico de gallo y jalapeños.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería Section -->
+        <section id="galeria" class="gallery" aria-labelledby="gallery-title">
+            <div class="container">
+                <h2 id="gallery-title" class="gallery__title">Galería</h2>
+                <div class="gallery__grid">
+                    <img src="img/cocteles-barra.jpg" alt="Cócteles en la barra" class="gallery__image" loading="lazy">
+                    <img src="img/about.jpg" alt="Ambiente del bar" class="gallery__image" loading="lazy">
+                    <img src="img/amigos-brindando.jpg" alt="Amigos brindando" class="gallery__image" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Eventos Próximos Section -->
+        <section id="eventos" class="events" aria-labelledby="events-title">
+            <div class="container">
+                <h2 id="events-title" class="events__title">Eventos Próximos</h2>
+                <div class="events__list">
+                    <div class="events__item">
+                        <img src="img/jazz.jpg" alt="Noche de Jazz" class="events__image" loading="lazy">
+                        <div class="events__item-content">
+                            <h3 class="events__item-title">Noche de Jazz</h3>
+                            <p class="events__item-date">Viernes, 15 de Noviembre - 21:00 hs</p>
+                        </div>
+                    </div>
+                    <div class="events__item">
+                        <img src="img/vinos.jpg" alt="Tasting de Vinos" class="events__image" loading="lazy">
+                        <div class="events__item-content">
+                            <h3 class="events__item-title">Tasting de Vinos</h3>
+                            <p class="events__item-date">Sábado, 16 de Noviembre - 19:00 hs</p>
+                        </div>
+                    </div>
+                    <div class="events__item">
+                        <img src="img/dj.jpg" alt="DJ Set Especial" class="events__image" loading="lazy">
+                        <div class="events__item-content">
+                            <h3 class="events__item-title">DJ Set Especial</h3>
+                            <p class="events__item-date">Viernes, 22 de Noviembre - 23:30 hs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="booking-section">
             <header class="booking-section__header">
                 <!-- Optional section title, but cards have their own headers -->
@@ -315,6 +535,7 @@
             </div>
         </section>
     </main>
+
 
     <!-- Footer -->
     <footer class="site-footer">

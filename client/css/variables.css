@@ -1,0 +1,72 @@
+/* css/variables.css */
+:root {
+    /* Paleta de colores Premium / Dark Mode Bar */
+    --color-bg-base: #121212;
+    --color-bg-surface: #1e1e1e;
+    --color-bg-surface-hover: #2c2c2c;
+    
+    --color-primary: #d4af37; /* Dorado metálico */
+    --color-primary-hover: #f3c746;
+    --color-primary-active: #b5952f;
+    
+    --color-text-main: #f5f5f5;
+    --color-text-muted: #a0a0a0;
+    
+    --color-error: #ff4c4c;
+    --color-success: #4caf50;
+    --color-border: #333333;
+    --color-border-focus: var(--color-primary);
+    
+    /* Tipografías */
+    --font-family-base: 'Outfit', system-ui, -apple-system, sans-serif;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 2rem;
+    
+    /* Espaciados */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2.5rem;
+    
+    /* Radios y Sombras */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    
+    --shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-focus: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    
+    /* Transiciones */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+}
+
+/* Reset básico para el contexto */
+body {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-main);
+    font-family: var(--font-family-base);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Clase de utilidad para accesibilidad (Screen Readers Only) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

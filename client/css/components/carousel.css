@@ -50,6 +50,19 @@
   left: 0;
 }
 
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .carousel__slide img {
+      /* Oversized so the drift never uncovers an edge inside the wrapper's overflow:hidden */
+      scale: 1.25;
+      animation: parallax-card-drift-tight linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      will-change: translate;
+    }
+  }
+}
+
 .carousel__button {
   position: absolute;
   top: 50%;

@@ -104,6 +104,12 @@ ul {
   z-index: -1;
 }
 
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hero-subtitle {
   font-size: 1rem;
   letter-spacing: 4px;
@@ -126,6 +132,19 @@ ul {
   letter-spacing: 3px;
   margin-bottom: 40px;
   color: var(--text-light);
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* Animated as one group so the title/subtitle/tags keep their relative
+       spacing instead of drifting apart at different rates. */
+    .hero-content {
+      animation: parallax-drift-deep linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      will-change: translate;
+    }
+  }
 }
 
 @media (max-width: 768px) {

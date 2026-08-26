@@ -15,31 +15,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Base / Variables -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/base/utilities.css">
+    <link rel="stylesheet" href="css/base/animations.css">
 
     <!-- New DEV layout CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/newsletter.css">
+    <link rel="stylesheet" href="css/base/main.css">
+    <link rel="stylesheet" href="css/layout/header.css">
+    <link rel="stylesheet" href="css/layout/navbar.css">
+    <link rel="stylesheet" href="css/layout/footer.css">
+    <link rel="stylesheet" href="css/components/newsletter.css">
     <link rel="stylesheet" href="css/components/forms.css">
     <link rel="stylesheet" href="css/components/buttons.css">
-    <link rel="stylesheet" href="css/layout/contact-section.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/booking-section.css">
-    <link rel="stylesheet" href="css/booking-card.css">
-    <link rel="stylesheet" href="css/reservations-list.css">
-    <link rel="stylesheet" href="css/reviews.css">
-    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/sections/contact-section.css">
+    <link rel="stylesheet" href="css/base/base.css">
+    <link rel="stylesheet" href="css/sections/booking-section.css">
+    <link rel="stylesheet" href="css/components/booking-card.css">
+    <link rel="stylesheet" href="css/components/reservations-list.css">
+    <link rel="stylesheet" href="css/components/reviews.css">
+    <link rel="stylesheet" href="css/components/carousel.css">
 
     <!-- HEAD branch CSS (menus, gallery, events) -->
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/events.css">
-    <link rel="stylesheet" href="css/carta.css">
+    <link rel="stylesheet" href="css/sections/about.css">
+    <link rel="stylesheet" href="css/sections/menu.css">
+    <link rel="stylesheet" href="css/sections/gallery.css">
+    <link rel="stylesheet" href="css/sections/events.css">
+    <link rel="stylesheet" href="css/components/carta.css">
 
     <!-- Scripts -->
     <script src="js/carousel.js" defer></script>
@@ -106,10 +107,11 @@
 
             <!-- Main Hero Section -->
             <main class="hero-section">
-                <p class="hero-subtitle">· Buenos Momentos ·</p>
-                <h1 class="hero-title">Grandes Amigos</h1>
-                <p class="hero-tags">MÚSICA · TRAGOS · BUENA VIBRA</p>
-                <button class="btn-primary">Ver Carta</button>
+                <div class="hero-content">
+                    <p class="hero-subtitle">· Buenos Momentos ·</p>
+                    <h1 class="hero-title">Grandes Amigos</h1>
+                    <p class="hero-tags">MÚSICA · TRAGOS · BUENA VIBRA</p>
+                </div>
             </main>
         </div>
     </div>
@@ -468,7 +470,7 @@
         <section id="contacto-reservas" class="contact-section">
             <div class="contact-container">
                 <header class="section-header">
-                    <h2>Contacto y Reservas</h2>
+                    <h2>Contacto para eventos</h2>
                     <p>Asegura tu lugar en nuestra barra o ponte en contacto con nosotros para eventos especiales.</p>
                 </header>
 
@@ -495,32 +497,7 @@
                         </div>
 
                         <div class="row-group">
-                            <div class="input-wrapper">
-                                <label for="date">Fecha <span class="required" aria-hidden="true">*</span></label>
-                                <input type="date" id="date" name="date" required>
-                                <span class="error-message" aria-live="polite">Selecciona una fecha para tu reserva.</span>
-                            </div>
-
-                            <div class="input-wrapper">
-                                <label for="time">Hora <span class="required" aria-hidden="true">*</span></label>
-                                <input type="time" id="time" name="time" required>
-                                <span class="error-message" aria-live="polite">Selecciona la hora de llegada.</span>
-                            </div>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <label for="guests">Número de personas <span class="required" aria-hidden="true">*</span></label>
-                            <select id="guests" name="guests" required>
-                                <option value="" disabled selected>Selecciona cantidad</option>
-                                <option value="1">1 persona</option>
-                                <option value="2">2 personas</option>
-                                <option value="3">3 personas</option>
-                                <option value="4">4 personas</option>
-                                <option value="5">5 personas</option>
-                                <option value="6">6 o más personas</option>
-                            </select>
-                            <span class="error-message" aria-live="polite">Selecciona la cantidad de personas.</span>
-                        </div>
+                            
 
                         <div class="input-wrapper full-width">
                             <label for="message">Mensaje adicional o peticiones especiales</label>

@@ -39,6 +39,19 @@
     object-fit: cover;
 }
 
+@supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+        .events__image {
+            /* Oversized so the drift never uncovers an edge inside the card's overflow:hidden */
+            scale: 1.25;
+            animation: parallax-card-drift-tight linear both;
+            animation-timeline: view();
+            animation-range: cover 0% cover 100%;
+            will-change: translate;
+        }
+    }
+}
+
 .events__item-content {
     padding: var(--spacing-md, 1.5rem);
     display: flex;

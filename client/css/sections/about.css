@@ -64,3 +64,14 @@
 .about__image-wrapper:hover .about__image {
   transform: scale(1.05);
 }
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .about__image-wrapper {
+      animation: parallax-drift-soft linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      will-change: translate;
+    }
+  }
+}

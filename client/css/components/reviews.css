@@ -77,3 +77,14 @@
   font-style: italic;
   line-height: 1.6;
 }
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .review-item {
+      animation: parallax-reveal ease-out both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+      will-change: translate, opacity;
+    }
+  }
+}

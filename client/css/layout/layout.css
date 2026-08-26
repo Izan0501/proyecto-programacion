@@ -42,7 +42,7 @@ body {
             rgba(18, 18, 18, 0.90),
             rgba(18, 18, 18, 0.95)
         ),
-        url('../img/bar-bg.jpg');
+        url('../../img/bar-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

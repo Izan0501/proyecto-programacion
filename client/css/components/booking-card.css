@@ -1,0 +1,105 @@
+.booking-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.booking-card__title {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-main);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: var(--spacing-sm);
+  display: inline-block;
+}
+
+.booking-card__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.booking-card__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.booking-card__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 480px) {
+  .booking-card__row {
+    flex-direction: row;
+  }
+  .booking-card__row .booking-card__field {
+    flex: 1;
+  }
+}
+
+.booking-card__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.booking-card__input,
+.booking-card__select {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  color: var(--color-text-main);
+  background-color: var(--color-wine);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  outline: none;
+}
+
+.booking-card__input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.booking-card__input:focus,
+.booking-card__select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.2);
+  background-color: #000000;
+}
+
+.booking-card__submit {
+  margin-top: var(--spacing-md);
+  padding: 0.875rem 1.5rem;
+  background-color: var(--color-primary);
+  color: #000000;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.booking-card__submit:hover,
+.booking-card__submit:focus-visible {
+  background-color: var(--color-primary-hover);
+}
+
+.booking-card__submit:active {
+  transform: translateY(1px);
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .booking-card {
+      animation: parallax-reveal ease-out both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+      will-change: translate, opacity;
+    }
+  }
+}

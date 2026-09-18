@@ -1,0 +1,80 @@
+/* Carta Section (Menú con Imágenes) */
+.carta__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg, 2rem);
+    margin-top: var(--spacing-lg, 2rem);
+}
+
+.carta-item {
+    background-color: var(--color-bg-light, #ffffff);
+    border-radius: var(--radius-lg, 12px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform var(--transition-base, 0.3s ease), box-shadow var(--transition-base, 0.3s ease);
+    display: flex;
+    flex-direction: column;
+}
+
+.carta-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.carta-item__image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.carta-item__content {
+    /* Moved here from .carta-item__image so the accent line isn't affected
+       by that element's scroll-driven scale/translate. */
+    border-top: 2px solid var(--color-primary, #e67e22);
+    padding: var(--spacing-lg, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.carta-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: var(--spacing-md, 1rem);
+    border-bottom: 1px dashed var(--color-text-muted, #ccc);
+    padding-bottom: 0.5rem;
+}
+
+.carta-item__title {
+    font-size: var(--font-size-lg, 1.3rem);
+    font-weight: 700;
+    color: var(--color-primary-dark, #2c3e50);
+    margin: 0;
+}
+
+.carta-item__price {
+    font-size: var(--font-size-lg, 1.3rem);
+    font-weight: 800;
+    color: var(--color-primary, #e67e22);
+}
+
+.carta-item__desc {
+    color: var(--color-text-muted, #666);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+        .carta-item__image {
+            /* Oversized so the drift never uncovers an edge inside the card's overflow:hidden */
+            scale: 1.25;
+            animation: parallax-card-drift-tight linear both;
+            animation-timeline: view();
+            animation-range: cover 0% cover 100%;
+            will-change: translate;
+        }
+    }
+}

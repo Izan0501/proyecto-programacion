@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Navbar Component
+   ========================================================================== */
+/* Estilos principales del contenedor Navbar */
+.navbar {
+    background-color: var(--color-background-lighter);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-index-navbar);
+    padding: var(--spacing-md) 0;
+}
+
+/* Layout interno del header */
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo de la marca/logo */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Lista de navegación en escritorio */
+.navbar-nav {
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+/* Estilo de los enlaces de navegación */
+.navbar-link {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: var(--spacing-xs) 0;
+}
+
+/* Micro-animación al pasar el mouse: subrayado */
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: var(--color-primary);
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+}
+
+/* Responsividad: ocultar menú en pantallas pequeñas 
+    normalmente se reemplaza por un menú hamburguesa */
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+    }
+}

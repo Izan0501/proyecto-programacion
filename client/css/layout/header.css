@@ -1,3 +1,7 @@
+/* =========================================================
+   TP3: CÓDIGO ORIGINAL COMENTADO (MIGRADO A BOOTSTRAP 5)
+   =========================================================
+
 .site-header {
   position: relative;
   background-image: url('../../img/bar_background.jpg');
@@ -20,12 +24,8 @@
   z-index: 10;
 }
 
-/* Top bar styles */
 .top-bar {
   display: grid;
-  /* Equal side columns keep the center column truly centered in the bar,
-     regardless of how much content sits in the left/right columns
-     (flex + space-between only centers it when both sides are equal width). */
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 12px;
@@ -85,3 +85,5 @@
     justify-self: center;
   }
 }
+
+========================================================= */

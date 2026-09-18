@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,414 +9,405 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
 
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Modular CSS Architecture (from new branch) -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/newsletter.css">
-    <link rel="stylesheet" href="css/components/forms.css">
-    <link rel="stylesheet" href="css/components/buttons.css">
-    <link rel="stylesheet" href="css/layout/contact-section.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS from old branch (for carousel, reviews, etc.) -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/booking-section.css">
-    <link rel="stylesheet" href="css/booking-card.css">
-    <link rel="stylesheet" href="css/reservations-list.css">
-    <link rel="stylesheet" href="css/reviews.css">
-    <link rel="stylesheet" href="css/carousel.css">
-
-    <!-- Scripts -->
-    <script src="js/carousel.js" defer></script>
+    <!-- Custom Premium Overrides -->
+    <link rel="stylesheet" href="css/custom-bootstrap.css">
 </head>
-<body>
-    <!-- Header & Hero Wrapper -->
-    <div class="site-header">
-        <div class="header-content">
-            <header>
-                <!-- Top Info Bar -->
-                <div class="top-bar">
-                    <div class="top-bar-left">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Av. Siempre Viva 123, San Miguel de Tucumán</span>
-                    </div>
-                    <div class="top-bar-center">
-                        <i class="fa-regular fa-clock"></i>
-                        <span>Mar - Dom: 18:00 - 02:00</span>
-                    </div>
-                    <div class="top-bar-right">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>381 123 4567</span>
-                        <div class="social-icons">
-                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Logo Section -->
-                <div class="header-logo-section">
-                    <div class="nav-logo-container">
-                        <i class="fa-solid fa-champagne-glasses nav-logo-icon"></i>
-                        <div class="nav-logo-text">Los<br>Amigos</div>
-                        <div class="nav-logo-subtext">· BAR ·</div>
-                    </div>
-                </div>
+<body class="bg-dark-custom text-light">
 
-                <!-- Navbar -->
-                <nav class="navbar">
-                    <div class="nav-container">
-                        <button class="menu-toggle" aria-label="Abrir menú" id="menu-toggle">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                        <ul class="nav-menu" id="nav-menu">
-                            <li><a href="#" class="nav-link active">Inicio</a></li>
-                            <li><a href="#" class="nav-link">Carta</a></li>
-                            <li><a href="#" class="nav-link">Galería</a></li>
-                            <li><a href="#" class="nav-link">Eventos</a></li>
-                            <li><a href="#" class="nav-link">Nosotros</a></li>
-                            <li><a href="#contacto-reservas" class="nav-link">Reservas</a></li>
-                            <li><a href="#" class="nav-link">Contacto</a></li>
-                            <li>
-                                <button class="btn-outline">
-                                    <i class="fa-regular fa-calendar" style="margin-right: 5px;"></i> Reservar
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-
-            <!-- Main Hero Section -->
-            <main class="hero-section">
-                <p class="hero-subtitle">· Buenos Momentos ·</p>
-                <h1 class="hero-title">Grandes Amigos</h1>
-                <p class="hero-tags">MÚSICA · TRAGOS · BUENA VIBRA</p>
-                <button class="btn-primary">Ver Carta</button>
-            </main>
+    <!-- Top Info Bar (Hidden on small screens) -->
+    <div class="bg-black py-2 d-none d-md-block border-bottom border-secondary">
+        <div class="container d-flex justify-content-between align-items-center small">
+            <div>
+                <i class="fa-solid fa-location-dot text-primary-custom me-2"></i>
+                <span class="text-white-50">Av. Siempre Viva 123, San Miguel de Tucumán</span>
+            </div>
+            <div>
+                <i class="fa-regular fa-clock text-primary-custom me-2"></i>
+                <span class="text-white-50 me-4">Mar - Dom: 18:00 - 02:00</span>
+                <i class="fa-solid fa-phone text-primary-custom me-2"></i>
+                <span class="text-white-50">381 123 4567</span>
+            </div>
         </div>
     </div>
 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-center" href="#">
+                <i class="fa-solid fa-champagne-glasses mb-1"></i><br>
+                Los Amigos
+                <span>· BAR ·</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars text-light fs-2"></i>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                <ul class="navbar-nav align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Carta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto-reservas">Reservas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <button class="btn btn-outline-primary px-4 py-2">
+                            <i class="fa-regular fa-calendar me-2"></i> Reservar
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="hero-subtitle">· Buenos Momentos ·</p>
+                    <h1 class="hero-title">Grandes Amigos</h1>
+                    <p class="text-white-50 mb-5 tracking-wide">MÚSICA · TRAGOS · BUENA VIBRA</p>
+                    <button class="btn btn-primary btn-lg px-5">Ver Carta</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <!-- Main Content Area -->
     <main>
-        <section class="booking-section">
-            <header class="booking-section__header">
-                <!-- Optional section title, but cards have their own headers -->
-            </header>
+        <section class="section-padding">
+            <div class="container">
+                <div class="row g-4 mb-5">
 
-            <div class="booking-section__top-cards">
-                <!-- Card 1: Formulario de reserva -->
-                <div class="booking-card">
-                    <h3 class="booking-card__title">Haz tu reserva</h3>
-                    <form class="booking-card__form" action="#" method="POST" onsubmit="event.preventDefault();">
-                        <div class="booking-card__field">
-                            <label class="booking-card__label" for="res-name">Nombre completo</label>
-                            <input class="booking-card__input" type="text" id="res-name" name="res-name"
-                                placeholder="Ej. Juan Pérez" required>
-                        </div>
-
-                        <div class="booking-card__field">
-                            <label class="booking-card__label" for="res-phone">Teléfono</label>
-                            <input class="booking-card__input" type="tel" id="res-phone" name="res-phone"
-                                placeholder="Ej. +34 600 000 000" required>
-                        </div>
-
-                        <div class="booking-card__row">
-                            <div class="booking-card__field">
-                                <label class="booking-card__label" for="res-date">Fecha</label>
-                                <input class="booking-card__input" type="date" id="res-date" name="res-date" required>
-                            </div>
-                            <div class="booking-card__field">
-                                <label class="booking-card__label" for="res-time">Hora</label>
-                                <input class="booking-card__input" type="time" id="res-time" name="res-time" required>
-                            </div>
-                        </div>
-
-                        <div class="booking-card__field">
-                            <label class="booking-card__label" for="res-guests">Número de personas</label>
-                            <select class="booking-card__select" id="res-guests" name="res-guests" required>
-                                <option value="" disabled selected>Selecciona una opción</option>
-                                <option value="1">1 Persona</option>
-                                <option value="2">2 Personas</option>
-                                <option value="3">3 Personas</option>
-                                <option value="4">4 Personas</option>
-                                <option value="5+">5 o más Personas</option>
-                            </select>
-                        </div>
-
-                        <button class="booking-card__submit" type="submit">Reservar</button>
-                    </form>
-                </div>
-
-                <!-- Card 2: Reservas hechas -->
-                <div class="reservations-list">
-                    <h3 class="reservations-list__title">Reservas hechas</h3>
-                    <ul class="reservations-list__items">
-                        <li class="reservation-item">
-                            <div class="reservation-item__details">
-                                <span class="reservation-item__date-time">📅 12 Octubre, 2026 - 20:30</span>
-                                <span class="reservation-item__guests">👥 4 Personas</span>
-                            </div>
-                            <span class="reservation-item__status">Confirmada</span>
-                        </li>
-                        <li class="reservation-item">
-                            <div class="reservation-item__details">
-                                <span class="reservation-item__date-time">📅 15 Octubre, 2026 - 19:00</span>
-                                <span class="reservation-item__guests">👥 2 Personas</span>
-                            </div>
-                            <span class="reservation-item__status">Confirmada</span>
-                        </li>
-                        <li class="reservation-item">
-                            <div class="reservation-item__details">
-                                <span class="reservation-item__date-time">📅 20 Octubre, 2026 - 21:00</span>
-                                <span class="reservation-item__guests">👥 6 Personas</span>
-                            </div>
-                            <span class="reservation-item__status">Confirmada</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Card 3: Reseñas de clientes -->
-            <div class="reviews">
-                <h3 class="reviews__title">Reseñas de clientes</h3>
-                <div class="reviews__list">
-                    <div class="review-item">
-                        <div class="review-item__header">
-                            <div class="review-item__avatar">M</div>
-                            <div>
-                                <div class="review-item__author">María Gómez</div>
-                                <div class="review-item__rating">★★★★★</div>
+                    <!-- Card 1: Formulario de reserva -->
+                    <div class="col-lg-6">
+                        <div class="card h-100 p-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-primary-custom mb-4">Haz tu reserva</h3>
+                                <form action="#" method="POST" onsubmit="event.preventDefault();">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="res-name">Nombre completo</label>
+                                        <input class="form-control" type="text" id="res-name"
+                                            placeholder="Ej. Juan Pérez" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="res-phone">Teléfono</label>
+                                        <input class="form-control" type="tel" id="res-phone"
+                                            placeholder="Ej. +34 600 000 000" required>
+                                    </div>
+                                    <div class="row g-3 mb-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="res-date">Fecha</label>
+                                            <input class="form-control" type="date" id="res-date" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="res-time">Hora</label>
+                                            <input class="form-control" type="time" id="res-time" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="res-guests">Número de personas</label>
+                                        <select class="form-select" id="res-guests" required>
+                                            <option value="" disabled selected>Selecciona una opción</option>
+                                            <option value="1">1 Persona</option>
+                                            <option value="2">2 Personas</option>
+                                            <option value="3">3 Personas</option>
+                                            <option value="4">4 Personas</option>
+                                            <option value="5+">5 o más Personas</option>
+                                        </select>
+                                    </div>
+                                    <button class="btn btn-primary w-100" type="submit">Reservar</button>
+                                </form>
                             </div>
                         </div>
-                        <p class="review-item__text">"Excelente servicio y un ambiente espectacular. La comida estaba deliciosa, definitivamente volveremos pronto."</p>
                     </div>
-                    <div class="review-item">
-                        <div class="review-item__header">
-                            <div class="review-item__avatar">C</div>
-                            <div>
-                                <div class="review-item__author">Carlos Ruiz</div>
-                                <div class="review-item__rating">★★★★☆</div>
-                            </div>
-                        </div>
-                        <p class="review-item__text">"Muy buena atención por parte del personal. Hice la reserva en línea y todo estaba listo cuando llegamos."</p>
-                    </div>
-                    <div class="review-item">
-                        <div class="review-item__header">
-                            <div class="review-item__avatar">L</div>
-                            <div>
-                                <div class="review-item__author">Laura Sánchez</div>
-                                <div class="review-item__rating">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="review-item__text">"Una experiencia inolvidable. El proceso de reserva fue facilísimo y el trato en el lugar superó mis expectativas."</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Carousel -->
-            <div class="carousel-wrapper">
-                <button class="carousel__button carousel__button--prev" aria-label="Previous slide">❮</button>
-                <div class="carousel" data-current-index="0">
-                    <div class="carousel__slide">
-                        <span class="carousel__image-placeholder"><img src="img/bar_1.png" alt="Bar1"></span>
-                    </div>
-                    <div class="carousel__slide">
-                        <span class="carousel__image-placeholder"><img src="img/bar_2.png" alt="Bar2"></span>
-                    </div>
-                    <div class="carousel__slide">
-                        <span class="carousel__image-placeholder"><img src="img/bar_3.png" alt="Bar3"></span>
+                    <!-- Card 2: Reservas hechas & Reseñas -->
+                    <div class="col-lg-6">
+                        <div class="row g-4">
+                            <!-- Reservas -->
+                            <div class="col-12">
+                                <div class="card p-3">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Reservas hechas</h4>
+                                        <ul class="list-group list-group-flush rounded bg-transparent">
+                                            <li
+                                                class="list-group-item bg-transparent text-light border-secondary d-flex justify-content-between align-items-center px-0">
+                                                <div>
+                                                    <div class="mb-1"><i
+                                                            class="fa-regular fa-calendar-days text-primary-custom me-2"></i>
+                                                        12 Octubre, 2026 - 20:30</div>
+                                                    <div class="text-white-50 small"><i
+                                                            class="fa-solid fa-user-group me-2"></i> 4 Personas</div>
+                                                </div>
+                                                <span class="badge bg-success rounded-pill">Confirmada</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item bg-transparent text-light border-secondary d-flex justify-content-between align-items-center px-0">
+                                                <div>
+                                                    <div class="mb-1"><i
+                                                            class="fa-regular fa-calendar-days text-primary-custom me-2"></i>
+                                                        15 Octubre, 2026 - 19:00</div>
+                                                    <div class="text-white-50 small"><i
+                                                            class="fa-solid fa-user-group me-2"></i> 2 Personas</div>
+                                                </div>
+                                                <span class="badge bg-success rounded-pill">Confirmada</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Reseñas -->
+                            <div class="col-12">
+                                <div class="card p-3">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Reseñas de clientes</h4>
+
+                                        <div class="d-flex mb-3 border-bottom border-secondary pb-3">
+                                            <div class="flex-shrink-0">
+                                                <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center fw-bold text-dark"
+                                                    style="width: 40px; height: 40px;">M</div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-0">María Gómez</h6>
+                                                <div class="text-primary-custom small mb-2">★★★★★</div>
+                                                <p class="mb-0 text-white-50 small fst-italic">"Excelente servicio y un
+                                                    ambiente espectacular. La comida estaba deliciosa..."</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center fw-bold text-dark"
+                                                    style="width: 40px; height: 40px;">C</div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-0">Carlos Ruiz</h6>
+                                                <div class="text-primary-custom small mb-2">★★★★☆</div>
+                                                <p class="mb-0 text-white-50 small fst-italic">"Muy buena atención por
+                                                    parte del personal. Hice la reserva en línea..."</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <button class="carousel__button carousel__button--next" aria-label="Next slide">❯</button>
 
-                <div class="carousel__dots">
-                    <button class="carousel__dot carousel__dot--active" aria-label="Go to slide 1"></button>
-                    <button class="carousel__dot" aria-label="Go to slide 2"></button>
-                    <button class="carousel__dot" aria-label="Go to slide 3"></button>
+                <!-- Carousel Bootstrap -->
+                <div class="row">
+                    <div class="col-12">
+                        <div id="barGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#barGalleryCarousel" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#barGalleryCarousel" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#barGalleryCarousel" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner shadow-lg rounded">
+                                <div class="carousel-item active">
+                                    <img src="img/bar_1.png" class="d-block w-100" alt="Bar 1">
+                                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                        <h5>Nuestra Barra</h5>
+                                        <p>Los mejores tragos de autor de la ciudad.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/bar_2.png" class="d-block w-100" alt="Bar 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/bar_3.png" class="d-block w-100" alt="Bar 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#barGalleryCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#barGalleryCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Contact & Reservation Form (from the new layout/contact-section) -->
-        <section id="contacto-reservas" class="contact-section">
-            <div class="contact-container">
-                <header class="section-header">
-                    <h2>Contacto y Reservas</h2>
-                    <p>Asegura tu lugar en nuestra barra o ponte en contacto con nosotros para eventos especiales.</p>
-                </header>
 
-                <form action="#" method="POST" class="reservation-form" aria-labelledby="form-title">
-                    <fieldset class="form-group">
-                        <legend id="form-title" class="sr-only">Información de Reserva</legend>
-
-                        <div class="input-wrapper">
-                            <label for="full-name">Nombre completo <span class="required" aria-hidden="true">*</span></label>
-                            <input type="text" id="full-name" name="full-name" required minlength="3" placeholder="Ej. Juan Pérez" autocomplete="name">
-                            <span class="error-message" aria-live="polite">Por favor, ingresa tu nombre (mín. 3 caracteres).</span>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <label for="email">Correo electrónico <span class="required" aria-hidden="true">*</span></label>
-                            <input type="email" id="email" name="email" required placeholder="tu@email.com" autocomplete="email">
-                            <span class="error-message" aria-live="polite">Ingresa un correo electrónico válido.</span>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <label for="phone">Teléfono <span class="required" aria-hidden="true">*</span></label>
-                            <input type="tel" id="phone" name="phone" required pattern="[0-9]{8,15}" placeholder="Ej. 1123456789">
-                            <span class="error-message" aria-live="polite">Ingresa un teléfono válido (solo números, 8-15 dígitos).</span>
-                        </div>
-
-                        <div class="row-group">
-                            <div class="input-wrapper">
-                                <label for="date">Fecha <span class="required" aria-hidden="true">*</span></label>
-                                <input type="date" id="date" name="date" required>
-                                <span class="error-message" aria-live="polite">Selecciona una fecha para tu reserva.</span>
-                            </div>
-
-                            <div class="input-wrapper">
-                                <label for="time">Hora <span class="required" aria-hidden="true">*</span></label>
-                                <input type="time" id="time" name="time" required>
-                                <span class="error-message" aria-live="polite">Selecciona la hora de llegada.</span>
-                            </div>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <label for="guests">Número de personas <span class="required" aria-hidden="true">*</span></label>
-                            <select id="guests" name="guests" required>
-                                <option value="" disabled selected>Selecciona cantidad</option>
-                                <option value="1">1 persona</option>
-                                <option value="2">2 personas</option>
-                                <option value="3">3 personas</option>
-                                <option value="4">4 personas</option>
-                                <option value="5">5 personas</option>
-                                <option value="6">6 o más personas</option>
-                            </select>
-                            <span class="error-message" aria-live="polite">Selecciona la cantidad de personas.</span>
-                        </div>
-
-                        <div class="input-wrapper full-width">
-                            <label for="message">Mensaje adicional o peticiones especiales</label>
-                            <textarea id="message" name="message" rows="4" placeholder="¿Algún requerimiento dietético o celebración especial?"></textarea>
-                        </div>
-                    </fieldset>
-
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
+        <!-- Contact & Reservation Form Section -->
+        <section id="contacto-reservas" class="section-padding bg-black border-top border-secondary">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center mb-5">
+                        <h2 class="text-primary-custom mb-3">Contacto y Reservas</h2>
+                        <p class="text-white-50">Asegura tu lugar en nuestra barra o ponte en contacto con nosotros para
+                            eventos especiales.</p>
                     </div>
-                </form>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card p-4 p-md-5">
+                            <div class="card-body">
+                                <form action="#" method="POST">
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <label for="full-name" class="form-label">Nombre completo <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="full-name" required
+                                                placeholder="Ej. Juan Pérez">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">Correo electrónico <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" id="email" required
+                                                placeholder="tu@email.com">
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label for="phone" class="form-label">Teléfono <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="tel" class="form-control" id="phone" required
+                                                placeholder="Ej. 1123456789">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="date" class="form-label">Fecha <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="date" class="form-control" id="date" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="time" class="form-label">Hora <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="time" class="form-control" id="time" required>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="guests-contact" class="form-label">Número de personas <span
+                                                    class="text-danger">*</span></label>
+                                            <select class="form-select" id="guests-contact" required>
+                                                <option value="" disabled selected>Selecciona cantidad</option>
+                                                <option value="1">1 persona</option>
+                                                <option value="2">2 personas</option>
+                                                <option value="3">3 personas</option>
+                                                <option value="4">4 personas</option>
+                                                <option value="5+">5 o más personas</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="message" class="form-label">Mensaje adicional</label>
+                                            <textarea class="form-control" id="message" rows="4"
+                                                placeholder="¿Algún requerimiento o celebración especial?"></textarea>
+                                        </div>
+
+                                        <div class="col-12 text-center mt-4">
+                                            <button type="submit" class="btn btn-primary btn-lg px-5">Confirmar
+                                                Reserva</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-grid">
+    <footer class="site-footer pb-4">
+        <div class="container">
+            <div class="row g-5 mb-5">
 
-            <!-- Column 1: Description -->
-            <section class="footer-col">
-                <h3 class="footer-logo">LOS AMIGOS</h3>
-                <span class="footer-logo-sub">· BAR ·</span>
-                <p class="footer-text">Un lugar donde la buena vibra, los tragos y los amigos se encuentran. Te esperamos.</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-            </section>
-
-            <!-- Column 2: Links -->
-            <section class="footer-col">
-                <h4 class="footer-col-title">Enlaces</h4>
-                <nav class="footer-nav" aria-label="Navegación del pie de página">
-                    <a href="#">Inicio</a>
-                    <a href="#">Carta</a>
-                    <a href="#">Galería</a>
-                    <a href="#">Eventos</a>
-                    <a href="#">Nosotros</a>
-                    <a href="#">Reservas</a>
-                    <a href="#">Contacto</a>
-                </nav>
-            </section>
-
-            <!-- Column 3: Schedule -->
-            <section class="footer-col">
-                <h4 class="footer-col-title">Horarios</h4>
-                <div class="footer-contact-item">
-                    <i class="fa-regular fa-clock"></i>
-                    <div>
-                        <p class="footer-text" style="margin-bottom:0">Martes a Domingo</p>
-                        <p class="footer-text">18:00 - 02:00</p>
+                <!-- Column 1: Brand -->
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="text-primary-custom mb-1"
+                        style="font-family: 'Playfair Display', serif; font-weight: 700;">LOS AMIGOS</h3>
+                    <span class="d-block mb-3 text-white-50" style="letter-spacing: 3px; font-size: 0.8rem;">· BAR
+                        ·</span>
+                    <p class="text-white-50 mb-4">Un lugar donde la buena vibra, los tragos y los amigos se encuentran.
+                        Te esperamos.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="footer-contact-item" style="margin-top: 5px;">
-                    <div style="margin-left: 24px;">
-                        <p class="footer-text" style="margin-bottom:0">Lunes</p>
-                        <p class="footer-text">Cerrado</p>
-                    </div>
+
+                <!-- Column 2: Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Enlaces</h5>
+                    <nav class="d-flex flex-column">
+                        <a href="#" class="footer-link">Inicio</a>
+                        <a href="#" class="footer-link">Carta</a>
+                        <a href="#" class="footer-link">Galería</a>
+                        <a href="#" class="footer-link">Eventos</a>
+                        <a href="#" class="footer-link">Reservas</a>
+                    </nav>
                 </div>
-            </section>
 
-            <!-- Column 4: Contact -->
-            <section class="footer-col">
-                <h4 class="footer-col-title">Contacto</h4>
-                <address style="font-style: normal;">
-                    <div class="footer-contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p class="footer-text" style="margin-bottom:0">Av. Siempre Viva 123,<br>San Miguel de Tucumán</p>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <p class="footer-text" style="margin-bottom:0">381 123 4567</p>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fa-regular fa-envelope"></i>
-                        <p class="footer-text" style="margin-bottom:0">hola@losamigosbar.com.ar</p>
-                    </div>
-                </address>
-            </section>
+                <!-- Column 3: Contact -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Contacto</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3 d-flex">
+                            <i class="fa-solid fa-location-dot text-primary-custom mt-1 me-3"></i>
+                            <span>Av. Siempre Viva 123,<br>San Miguel de Tucumán</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fa-solid fa-phone text-primary-custom me-3"></i>
+                            <span>381 123 4567</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fa-regular fa-envelope text-primary-custom me-3"></i>
+                            <span>hola@losamigosbar.com.ar</span>
+                        </li>
+                    </ul>
+                </div>
 
-            <!-- Column 5: Newsletter -->
-            <section class="footer-col">
-                <h4 class="footer-col-title">Newsletter</h4>
-                <p class="footer-text">Suscribite y enterate de eventos y promociones exclusivas.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Tu e-mail" class="newsletter-input" required>
-                    <button type="submit" class="newsletter-btn">Suscribirme</button>
-                </form>
-            </section>
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="text-white-50 mb-3">Suscribite y enterate de eventos y promociones exclusivas.</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control bg-dark border-secondary text-light"
+                                placeholder="Tu e-mail" required>
+                            <button class="btn btn-outline-primary" type="submit">Suscribir</button>
+                        </div>
+                    </form>
+                </div>
 
-        </div>
+            </div>
 
-        <!-- Copyright -->
-        <div class="footer-bottom">
-            <p>&copy; 2024 Los Amigos Bar. Todos los derechos reservados.</p>
+            <div class="border-top border-secondary pt-4 text-center">
+                <p class="text-white-50 small mb-0">&copy; 2026 Los Amigos Bar. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
-        });
-    </script>
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

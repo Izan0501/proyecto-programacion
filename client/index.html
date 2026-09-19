@@ -13,16 +13,18 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <!-- Modular CSS Architecture -->
-    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/newsletter.css">
-    <link rel="stylesheet" href="css/components/forms.css">
-    <link rel="stylesheet" href="css/components/buttons.css">
-    <link rel="stylesheet" href="css/layout/contact-section.css">
+    
+    <!-- Unified CSS para el formulario y variables/botones -->
+    <link rel="stylesheet" href="css/formularios.css">
 </head>
 
 <body>
@@ -97,52 +99,52 @@
     </div>
 
     <main>
-        <section id="contacto-reservas" class="contact-section">
-            <div class="contact-container">
-                <header class="section-header">
-                    <h2>Contacto y Reservas</h2>
-                    <p>Asegura tu lugar en nuestra barra o ponte en contacto con nosotros para eventos especiales.</p>
+        <section id="contacto-reservas" class="py-5 bg-dark text-light">
+            <div class="container custom-contact-container p-4 p-md-5 rounded-4 shadow border border-secondary" style="max-width: 800px;">
+                <header class="text-center mb-5">
+                    <h2 class="fw-bold mb-3">Contacto y Reservas</h2>
+                    <p class="text-secondary mx-auto" style="max-width: 600px;">Asegura tu lugar en nuestra barra o ponte en contacto con nosotros para eventos especiales.</p>
                 </header>
 
-                <form action="#" method="POST" class="reservation-form" aria-labelledby="form-title">
-                    <fieldset class="form-group">
-                        <legend id="form-title" class="sr-only">Información de Reserva</legend>
+                <form action="#" method="POST" class="needs-validation" aria-labelledby="form-title" novalidate>
+                    <fieldset>
+                        <legend id="form-title" class="visually-hidden">Información de Reserva</legend>
 
-                        <div class="input-wrapper">
-                            <label for="full-name">Nombre completo <span class="required" aria-hidden="true">*</span></label>
-                            <input type="text" id="full-name" name="full-name" required minlength="3" placeholder="Ej. Juan Pérez" autocomplete="name">
-                            <span class="error-message" aria-live="polite">Por favor, ingresa tu nombre (mín. 3 caracteres).</span>
+                        <div class="mb-3">
+                            <label for="full-name" class="form-label">Nombre completo <span class="required-star" aria-hidden="true">*</span></label>
+                            <input type="text" class="form-control custom-form-control bg-dark text-light border-secondary" id="full-name" name="full-name" required minlength="3" placeholder="Ej. Juan Pérez" autocomplete="name">
+                            <div class="invalid-feedback">Por favor, ingresa tu nombre (mín. 3 caracteres).</div>
                         </div>
 
-                        <div class="input-wrapper">
-                            <label for="email">Correo electrónico <span class="required" aria-hidden="true">*</span></label>
-                            <input type="email" id="email" name="email" required placeholder="tu@email.com" autocomplete="email">
-                            <span class="error-message" aria-live="polite">Ingresa un correo electrónico válido.</span>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico <span class="required-star" aria-hidden="true">*</span></label>
+                            <input type="email" class="form-control custom-form-control bg-dark text-light border-secondary" id="email" name="email" required placeholder="tu@email.com" autocomplete="email">
+                            <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
                         </div>
 
-                        <div class="input-wrapper">
-                            <label for="phone">Teléfono <span class="required" aria-hidden="true">*</span></label>
-                            <input type="tel" id="phone" name="phone" required pattern="[0-9]{8,15}" placeholder="Ej. 1123456789">
-                            <span class="error-message" aria-live="polite">Ingresa un teléfono válido (solo números, 8-15 dígitos).</span>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Teléfono <span class="required-star" aria-hidden="true">*</span></label>
+                            <input type="tel" class="form-control custom-form-control bg-dark text-light border-secondary" id="phone" name="phone" required pattern="[0-9]{8,15}" placeholder="Ej. 1123456789">
+                            <div class="invalid-feedback">Ingresa un teléfono válido (solo números, 8-15 dígitos).</div>
                         </div>
 
-                        <div class="row-group">
-                            <div class="input-wrapper">
-                                <label for="date">Fecha <span class="required" aria-hidden="true">*</span></label>
-                                <input type="date" id="date" name="date" required>
-                                <span class="error-message" aria-live="polite">Selecciona una fecha para tu reserva.</span>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="date" class="form-label">Fecha <span class="required-star" aria-hidden="true">*</span></label>
+                                <input type="date" class="form-control custom-form-control bg-dark text-light border-secondary" id="date" name="date" required>
+                                <div class="invalid-feedback">Selecciona una fecha para tu reserva.</div>
                             </div>
 
-                            <div class="input-wrapper">
-                                <label for="time">Hora <span class="required" aria-hidden="true">*</span></label>
-                                <input type="time" id="time" name="time" required>
-                                <span class="error-message" aria-live="polite">Selecciona la hora de llegada.</span>
+                            <div class="col-md-6 mb-3">
+                                <label for="time" class="form-label">Hora <span class="required-star" aria-hidden="true">*</span></label>
+                                <input type="time" class="form-control custom-form-control bg-dark text-light border-secondary" id="time" name="time" required>
+                                <div class="invalid-feedback">Selecciona la hora de llegada.</div>
                             </div>
                         </div>
 
-                        <div class="input-wrapper">
-                            <label for="guests">Número de personas <span class="required" aria-hidden="true">*</span></label>
-                            <select id="guests" name="guests" required>
+                        <div class="mb-3">
+                            <label for="guests" class="form-label">Número de personas <span class="required-star" aria-hidden="true">*</span></label>
+                            <select class="form-select custom-form-select bg-dark text-light border-secondary" id="guests" name="guests" required>
                                 <option value="" disabled selected>Selecciona cantidad</option>
                                 <option value="1">1 persona</option>
                                 <option value="2">2 personas</option>
@@ -151,17 +153,17 @@
                                 <option value="5">5 personas</option>
                                 <option value="6">6 o más personas</option>
                             </select>
-                            <span class="error-message" aria-live="polite">Selecciona la cantidad de personas.</span>
+                            <div class="invalid-feedback">Selecciona la cantidad de personas.</div>
                         </div>
 
-                        <div class="input-wrapper full-width">
-                            <label for="message">Mensaje adicional o peticiones especiales</label>
-                            <textarea id="message" name="message" rows="4" placeholder="¿Algún requerimiento dietético o celebración especial?"></textarea>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Mensaje adicional o peticiones especiales</label>
+                            <textarea class="form-control custom-form-control bg-dark text-light border-secondary" id="message" name="message" rows="4" placeholder="¿Algún requerimiento dietético o celebración especial?"></textarea>
                         </div>
                     </fieldset>
 
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
+                    <div class="d-grid mt-4">
+                        <button type="submit" class="btn btn-gold py-3 text-uppercase fw-bold text-dark">Confirmar Reserva</button>
                     </div>
                 </form>
             </div>

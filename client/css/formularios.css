@@ -1,0 +1,423 @@
+/* 
+==========================================================================
+   ESTILOS PERSONALIZADOS DEL FORMULARIO DE RESERVAS (COMPLEMENTO BOOTSTRAP)
+==========================================================================
+Este archivo contiene únicamente los estilos que Bootstrap 5 no puede cubrir 
+por defecto mediante sus clases de utilidad. Mantenemos el principio de 
+separación de responsabilidades: la estructura, el espaciado (margins/paddings)
+y la adaptabilidad (grid) los maneja Bootstrap. 
+
+Aquí definimos exclusivamente la identidad visual:
+- Colores exactos (dorado/ámbar).
+- Tipografía específica ('Outfit').
+- Comportamientos interactivos detallados (hover, focus, shadows).
+*/
+
+/* 
+--------------------------------------------------------------------------
+   1. VARIABLES PERSONALIZADAS
+--------------------------------------------------------------------------
+Definimos nuestras variables en la seudoclase :root para mantener la 
+consistencia del color dorado/ámbar en todo el componente. Utilizamos estas 
+variables en lugar de escribir valores hexadecimales fijos repetidamente, 
+lo que facilita futuros cambios temáticos globales.
+*/
+:root {
+  /* Color principal de acento: un tono dorado elegante para destacar */
+  --gold-accent: #d4af37;
+  /* Color para el estado hover del botón: un dorado más brillante */
+  --gold-accent-hover: #f1c40f;
+  /* Color de fondo específico para el contenedor del formulario */
+  --form-bg-surface: #1e1e1e;
+}
+
+/* 
+--------------------------------------------------------------------------
+   2. TIPOGRAFÍA Y ESTILOS BASE DEL CONTENEDOR
+--------------------------------------------------------------------------
+Aplicamos la fuente 'Outfit' solicitada específicamente para este
+formulario. También establecemos el color de fondo exacto del contenedor
+que resalta sutilmente sobre el fondo oscuro general de la página.
+*/
+.custom-contact-container {
+  /* Sobrescribimos la tipografía por defecto de Bootstrap para este bloque.
+     Esto asegura que todos los labels, inputs y textos hereden 'Outfit'. */
+  font-family: 'Outfit', sans-serif;
+  
+  /* Aplicamos un fondo gris muy oscuro, ligeramente distinto al bg-dark 
+     estándar de Bootstrap, para darle profundidad al diseño material. */
+  background-color: var(--form-bg-surface);
+}
+
+/* 
+Aseguramos que el título principal use la fuente 'Outfit' pero con
+su respectivo estilo, y le aplicamos nuestro color dorado personalizado.
+*/
+.custom-contact-container h2 {
+  /* Reafirmamos la fuente para el encabezado */
+  font-family: 'Outfit', sans-serif;
+  /* Aplicamos el tono dorado/ámbar de nuestra variable */
+  color: var(--gold-accent);
+  /* Aumentamos ligeramente el espaciado entre letras (tracking) 
+     para darle una apariencia más premium y elegante al título. */
+  letter-spacing: 1px;
+}
+
+/* 
+--------------------------------------------------------------------------
+   3. PERSONALIZACIÓN DE CAMPOS DE FORMULARIO (INPUTS)
+--------------------------------------------------------------------------
+Bootstrap 5 tiene buenos estilos oscuros con las clases .bg-dark, pero 
+necesitamos que al enfocar (focus) un campo de texto o un select, 
+el borde y el anillo luminoso (box-shadow) utilicen nuestro color dorado 
+en lugar del azul predeterminado de Bootstrap, manteniendo la coherencia.
+*/
+.custom-form-control:focus,
+.custom-form-select:focus {
+  /* Cambiamos el color del borde al enfocar al dorado */
+  border-color: var(--gold-accent);
+  
+  /* Reemplazamos la sombra de enfoque (focus ring) azul genérica 
+     por una sombra dorada translúcida que coincida con la paleta.
+     Usamos rgba() con un 25% de opacidad para lograr el efecto halo. */
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
+/* 
+Estilizamos el asterisco de campo obligatorio para que no sea un 
+simple texto rojo o negro, sino que haga juego con nuestro acento dorado.
+*/
+.required-star {
+  /* Asignamos el color dorado al asterisco de campos obligatorios */
+  color: var(--gold-accent);
+  /* Lo ponemos en negrita para asegurar que sea visible y claro */
+  font-weight: bold;
+}
+
+/* 
+Para los iconos nativos de calendario y reloj en los inputs de type="date" 
+y "time", Bootstrap a veces no los invierte correctamente sobre fondos oscuros.
+Usamos filtros CSS para garantizar su legibilidad.
+*/
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  /* Invertimos el color del icono nativo (de negro a blanco) y 
+     reducimos ligeramente su opacidad para que no brille en exceso. */
+  filter: invert(1) opacity(0.7);
+  /* Cambiamos el cursor para indicar que son interactivos */
+  cursor: pointer;
+}
+
+/* 
+--------------------------------------------------------------------------
+   4. ESTILOS Y ESTADOS HOVER DEL BOTÓN PRINCIPAL
+--------------------------------------------------------------------------
+Creamos una clase personalizada (.btn-gold) para el botón de envío. 
+Esta clase se usa en combinación con la estructura base .btn de Bootstrap, 
+pero aportando nuestros colores exactos y animaciones fluidas de elevación.
+*/
+.btn-gold {
+  /* Establecemos el fondo con nuestro dorado principal */
+  background-color: var(--gold-accent);
+  /* Definimos el borde del mismo color para no alterar las dimensiones de Bootstrap */
+  border-color: var(--gold-accent);
+  /* Usamos texto oscuro puro (#000) para garantizar un contraste altísimo 
+     y máxima legibilidad sobre el fondo dorado brillante. */
+  color: #000;
+  
+  /* Agregamos una transición suave a todas las propiedades.
+     Esto hará que los cambios de color, sombra y posición se vean 
+     animados de manera natural y no brusca. */
+  transition: all 0.3s ease;
+  
+  /* Aplicamos una sombra sutil por defecto, proyectando un reflejo dorado */
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+/* 
+Definimos qué sucede cuando el usuario pasa el cursor por encima (hover)
+o navega hacia el botón utilizando la tecla Tab del teclado (focus).
+*/
+.btn-gold:hover,
+.btn-gold:focus {
+  /* Cambiamos a la variable de un dorado más brillante y llamativo */
+  background-color: var(--gold-accent-hover);
+  border-color: var(--gold-accent-hover);
+  /* Aseguramos explícitamente que el color del texto siga siendo oscuro */
+  color: #000;
+  
+  /* Utilizamos una transformación en el eje Y para elevar el botón 
+     visualmente (2 píxeles hacia arriba), dando sensación de tacto. */
+  transform: translateY(-2px);
+  
+  /* Simultáneamente a la elevación, aumentamos el tamaño y la opacidad 
+     de la sombra para reforzar el efecto tridimensional de "flotar". */
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* 
+Definimos el estado activo, que se dispara exactamente en el instante
+en que el usuario hace clic o presiona Enter/Espacio sobre el botón.
+*/
+.btn-gold:active {
+  /* Hundimos el botón empujándolo ligeramente hacia abajo, 
+     pasando la posición original (1 píxel hacia abajo). */
+  transform: translateY(1px);
+  
+  /* Reducimos drásticamente la sombra y su dispersión para simular 
+     físicamente que el botón acaba de ser presionado contra la superficie. */
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+/* ==========================================================================
+   CÓDIGO CSS ANTERIOR (VERSIÓN SIN BOOTSTRAP)
+   Guardado como referencia a petición del usuario
+   ==========================================================================
+
+:root {
+  --form-bg-color: #121212;
+  --form-container-bg: #1e1e1e;
+  --form-text-color: #f5f5f5;
+  --form-text-muted: #a0a0a0;
+  --form-border-color: #333333;
+  --form-input-bg: #2a2a2a;
+  
+  --gold-accent: #d4af37;
+  --gold-accent-hover: #f1c40f;
+  --gold-accent-active: #c59b27;
+  
+  --error-color: #ff5252;
+  --success-color: #4caf50;
+  
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+.contact-section {
+  background-color: var(--form-bg-color);
+  color: var(--form-text-color);
+  padding: 4rem 1.5rem;
+  font-family: var(--font-main);
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--form-container-bg);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--form-border-color);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--gold-accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.section-header p {
+  color: var(--form-text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.row-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--form-text-color);
+  display: flex;
+  align-items: center;
+}
+
+.required {
+  color: var(--gold-accent);
+  margin-left: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background-color: var(--form-input-bg);
+  border: 1px solid var(--form-border-color);
+  border-radius: var(--border-radius-md);
+  color: var(--form-text-color);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) sepia(100%) saturate(400%) hue-rotate(350deg) brightness(80%) contrast(100%);
+  cursor: pointer;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--gold-accent);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+.error-message {
+  display: none;
+  color: var(--error-color);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  animation: fadeIn 0.3s ease;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown),
+select:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: var(--error-color);
+}
+input:invalid:not(:focus):not(:placeholder-shown) ~ .error-message,
+select:invalid:not(:focus):not(:placeholder-shown) ~ .error-message {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: none;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: var(--gold-accent);
+  color: #000;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--gold-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  outline: none;
+}
+
+.btn-primary:active {
+  background-color: var(--gold-accent-active);
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+@media (min-width: 768px) {
+  .contact-container {
+    padding: 3rem;
+  }
+  
+  .row-group {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .full-width {
+    grid-column: 1 / -1;
+  }
+  
+  .btn {
+    width: auto;
+    min-width: 250px;
+  }
+}
+*/

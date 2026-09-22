@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <script>document.documentElement.classList.add('js-anim');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Los Amigos Bar - Reservas, cócteles y buena vibra en San Miguel de Tucumán.">
+    <title>Los Amigos Bar | Inicio</title>
+
+    <!-- Tipografias (CDN, con fallback del sistema si no hay conexion) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap 5.3.3, copia local.
+         Va local y SIN integrity/crossorigin a proposito: Safari bloquea los
+         recursos con Subresource Integrity cuando la pagina se abre con
+         file:// (origen opaco) y la pagina quedaba sin estilos al abrir el
+         index con doble clic. Asi tambien funciona sin conexion. -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <!-- Hoja de estilos propia (ultima, para poder pisar a Bootstrap) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100" data-bs-spy="scroll" data-bs-target="#navPrincipal" data-bs-root-margin="0px 0px -55%">
+
+    <!-- Salto de accesibilidad -->
+    <a href="#contenido" class="skip-link visually-hidden-focusable btn btn-warning m-2">Saltar al contenido</a>
+
+    <!-- ============================= BARRA SUPERIOR ============================= -->
+    <div class="bg-black border-bottom border-secondary border-opacity-25 py-2 small text-secondary">
+        <div class="container d-flex flex-wrap justify-content-center justify-content-md-between align-items-center gap-2 gap-md-3">
+            <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-location-dot text-warning"></i>
+                <span>Av. Siempre Viva 123, San Miguel de Tucumán</span>
+            </div>
+
+            <div class="d-none d-md-flex align-items-center gap-2">
+                <i class="fa-regular fa-clock text-warning"></i>
+                <span>Mar a Dom: 18:00 - 02:00</span>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <a href="tel:+543811234567" class="d-none d-sm-flex align-items-center gap-2 text-secondary text-decoration-none hover-gold">
+                    <i class="fa-solid fa-phone text-warning"></i> 381 123 4567
+                </a>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-secondary hover-gold" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-secondary hover-gold" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-secondary hover-gold" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================ NAVBAR ================================= -->
+    <nav class="navbar navbar-expand-lg navbar-glass sticky-top border-bottom border-secondary border-opacity-25">
+        <div class="container py-1">
+
+            <a class="navbar-brand d-flex align-items-center gap-2 text-uppercase fw-bold" href="#">
+                <i class="fa-solid fa-champagne-glasses text-warning fs-3"></i>
+                <span class="lh-1">
+                    <span class="text-warning">Los</span> Amigos
+                    <small class="d-block text-secondary fw-normal letter-spacing-3" style="font-size:.6rem">· Bar ·</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navPrincipal" aria-controls="navPrincipal" aria-expanded="false"
+                aria-label="Abrir o cerrar el menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navPrincipal">
+                <ul class="navbar-nav align-items-lg-center gap-lg-2 pt-3 pt-lg-0 text-uppercase fw-semibold small letter-spacing-1">
+                    <li class="nav-item"><a class="nav-link active px-2" aria-current="page" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="#carta">Carta</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="#cocteles">Cócteles</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="#eventos">Eventos</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-warning btn-sm px-3 text-uppercase" href="#reservas">Reservar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="contenido" class="flex-grow-1">
+
+        <!-- ================================= HERO ============================== -->
+        <header id="inicio" class="hero d-flex align-items-center justify-content-center text-center position-relative">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-8" data-parallax="0.15">
+
+                        <p class="section-eyebrow mb-3">· Buenos Momentos ·</p>
+
+                        <h1 class="display-2 fw-bold text-uppercase mb-3">Grandes Amigos</h1>
+
+                        <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
+                            <hr class="rule-gold flex-grow-1 mb-0" style="max-width:120px">
+                            <i class="fa-solid fa-martini-glass-citrus text-warning"></i>
+                            <hr class="rule-gold flex-grow-1 mb-0" style="max-width:120px">
+                        </div>
+
+                        <p class="lead text-secondary text-uppercase letter-spacing-2 mb-4">
+                            Música · Tragos · Buena Vibra
+                        </p>
+
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="#reservas" class="btn btn-warning btn-lg px-4 text-uppercase letter-spacing-1">Reservar Mesa</a>
+                            <a href="#carta" class="btn btn-outline-warning btn-lg px-4 text-uppercase letter-spacing-1">Ver Carta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#nosotros" class="hero__scroll-cue position-absolute bottom-0 mb-4 text-secondary fs-4 text-decoration-none"
+                aria-label="Ir a la siguiente sección">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </header>
+
+        <!-- =============================== NOSOTROS ============================ -->
+        <section id="nosotros" class="py-5 py-lg-6" aria-labelledby="titulo-nosotros">
+            <div class="container py-lg-4">
+                <div class="row align-items-center g-4 g-lg-5">
+
+                    <div class="col-12 col-lg-6" data-reveal="left">
+                        <p class="section-eyebrow mb-2">Nuestra Historia</p>
+                        <h2 id="titulo-nosotros" class="section-title h1 mb-4">Un lugar para volver</h2>
+
+                        <p class="text-secondary mb-3">
+                            Fundado con la pasión de ofrecer un espacio único, nuestro bar es mucho más que un
+                            lugar para tomar una copa. Somos creadores de experiencias, combinando la mejor
+                            mixología con un servicio excepcional.
+                        </p>
+
+                        <p class="text-secondary mb-4">
+                            Nuestra misión es lograr que cada visita se sienta como una celebración. Vení a
+                            relajarte, conectarte con amigos y disfrutar de nuestra cuidada selección de bebidas
+                            en un ambiente vibrante.
+                        </p>
+
+                        <div class="row g-3 text-center">
+                            <div class="col-4">
+                                <div class="h3 text-warning mb-0" data-count="12" data-count-prefix="+">+12</div>
+                                <div class="small text-secondary text-uppercase letter-spacing-1">Años</div>
+                            </div>
+                            <div class="col-4 border-start border-end border-secondary border-opacity-25">
+                                <div class="h3 text-warning mb-0" data-count="40" data-count-prefix="+">+40</div>
+                                <div class="small text-secondary text-uppercase letter-spacing-1">Tragos</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="h3 text-warning mb-0" data-count="90" data-count-prefix="+">+90</div>
+                                <div class="small text-secondary text-uppercase letter-spacing-1">Eventos</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="ratio ratio-4x3 rounded-3 overflow-hidden shadow zoom-host" data-reveal="right">
+                            <img src="img/about.jpg"
+                                alt="Bartender preparando un cóctel artesanal en la barra"
+                                class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================ CARTA DE COMIDA ======================== -->
+        <section id="carta" class="py-5 py-lg-6 bg-black" aria-labelledby="titulo-carta">
+            <div class="container py-lg-4">
+
+                <div class="text-center mb-5">
+                    <p class="section-eyebrow mb-2">Para acompañar</p>
+                    <h2 id="titulo-carta" class="section-title section-title--center h1">Carta de Comida</h2>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                    <div class="col">
+                        <article class="card card-lift h-100 overflow-hidden zoom-host" data-reveal="up">
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="img/hamburguesa.jpg" alt="Hamburguesa artesanal"
+                                    class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                            </div>
+                            <div class="card-body card-accent-top">
+                                <div class="d-flex justify-content-between align-items-baseline gap-2 border-bottom border-secondary border-opacity-25 pb-2 mb-3">
+                                    <h3 class="h5 mb-0">Hamburguesa Artesanal</h3>
+                                    <span class="fw-bold text-warning">$12</span>
+                                </div>
+                                <p class="text-secondary small mb-0">
+                                    Doble carne, queso cheddar, bacon crujiente y cebolla caramelizada.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="card card-lift h-100 overflow-hidden zoom-host" data-reveal="up">
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="img/papas.jpg" alt="Papas rústicas"
+                                    class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                            </div>
+                            <div class="card-body card-accent-top">
+                                <div class="d-flex justify-content-between align-items-baseline gap-2 border-bottom border-secondary border-opacity-25 pb-2 mb-3">
+                                    <h3 class="h5 mb-0">Papas Rústicas</h3>
+                                    <span class="fw-bold text-warning">$7</span>
+                                </div>
+                                <p class="text-secondary small mb-0">
+                                    Papas al horno con pimentón, romero y salsa alioli de la casa.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="card card-lift h-100 overflow-hidden zoom-host" data-reveal="up">
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="img/fiambre.jpg" alt="Tabla de fiambres"
+                                    class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                            </div>
+                            <div class="card-body card-accent-top">
+                                <div class="d-flex justify-content-between align-items-baseline gap-2 border-bottom border-secondary border-opacity-25 pb-2 mb-3">
+                                    <h3 class="h5 mb-0">Tabla de Fiambres</h3>
+                                    <span class="fw-bold text-warning">$18</span>
+                                </div>
+                                <p class="text-secondary small mb-0">
+                                    Selección premium de jamón crudo, salame, quesos y aceitunas marinadas.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="card card-lift h-100 overflow-hidden zoom-host" data-reveal="up">
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="img/pizza.jpg" alt="Pizza margarita"
+                                    class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                            </div>
+                            <div class="card-body card-accent-top">
+                                <div class="d-flex justify-content-between align-items-baseline gap-2 border-bottom border-secondary border-opacity-25 pb-2 mb-3">
+                                    <h3 class="h5 mb-0">Pizza Margarita</h3>
+                                    <span class="fw-bold text-warning">$14</span>
+                                </div>
+                                <p class="text-secondary small mb-0">
+                                    Salsa de tomate casera, mozzarella fresca y hojas de albahaca.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="card card-lift h-100 overflow-hidden zoom-host" data-reveal="up">
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="img/pollo.jpg" alt="Tiras de pollo"
+                                    class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                            </div>
+                            <div class="card-body card-accent-top">
+                                <div class="d-flex justify-content-between align-items-baseline gap-2 border-bottom border-secondary border-opacity-25 pb-2 mb-3">
+                                    <h3 class="h5 mb-0">Tiras de Pollo</h3>
+                                    <span class="fw-bold text-warning">$9</span>
+                                </div>
+                                <p class="text-secondary small mb-0">
+                                    Crujientes tiras de pollo rebozadas acompañadas de salsa honey mustard.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="card card-lift h-100 overflow-hidden zoom-host" data-reveal="up">
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="img/nachos.jpg" alt="Nachos supremos"
+                                    class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                            </div>
+                            <div class="card-body card-accent-top">
+                                <div class="d-flex justify-content-between align-items-baseline gap-2 border-bottom border-secondary border-opacity-25 pb-2 mb-3">
+                                    <h3 class="h5 mb-0">Nachos Supremos</h3>
+                                    <span class="fw-bold text-warning">$11</span>
+                                </div>
+                                <p class="text-secondary small mb-0">
+                                    Totopos con queso fundido, guacamole, pico de gallo y jalapeños.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================== CÓCTELES DESTACADOS ====================== -->
+        <section id="cocteles" class="py-5 py-lg-6" aria-labelledby="titulo-cocteles">
+            <div class="container py-lg-4">
+
+                <div class="text-center mb-5">
+                    <p class="section-eyebrow mb-2">De la barra</p>
+                    <h2 id="titulo-cocteles" class="section-title section-title--center h1">Cócteles Destacados</h2>
+                </div>
+
+                <div class="row g-4 g-lg-5">
+
+                    <div class="col-12 col-lg-6" data-reveal="up">
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex align-items-center gap-3 border-bottom border-secondary border-opacity-25 pb-3 mb-3 zoom-host">
+                                <div class="rounded-circle overflow-hidden flex-shrink-0" style="width:64px;height:64px">
+                                    <img src="img/mojito.jpg" alt="Mojito" class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-baseline gap-2">
+                                        <h3 class="h6 mb-1">Mojito Clásico</h3>
+                                        <span class="fw-bold text-warning">$8</span>
+                                    </div>
+                                    <p class="text-secondary small mb-0">Ron blanco, menta fresca, lima y soda.</p>
+                                </div>
+                            </li>
+
+                            <li class="d-flex align-items-center gap-3 border-bottom border-secondary border-opacity-25 pb-3 mb-3 zoom-host">
+                                <div class="rounded-circle overflow-hidden flex-shrink-0" style="width:64px;height:64px">
+                                    <img src="img/negroni.jpg" alt="Negroni" class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-baseline gap-2">
+                                        <h3 class="h6 mb-1">Negroni</h3>
+                                        <span class="fw-bold text-warning">$10</span>
+                                    </div>
+                                    <p class="text-secondary small mb-0">Gin, vermut rosso y bitter, con twist de naranja.</p>
+                                </div>
+                            </li>
+
+                            <li class="d-flex align-items-center gap-3 zoom-host">
+                                <div class="rounded-circle overflow-hidden flex-shrink-0" style="width:64px;height:64px">
+                                    <img src="img/gin-tonic.jpg" alt="Gin Tonic" class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-baseline gap-2">
+                                        <h3 class="h6 mb-1">Gin Tonic de Autor</h3>
+                                        <span class="fw-bold text-warning">$9</span>
+                                    </div>
+                                    <p class="text-secondary small mb-0">Gin premium, tónica artesanal y botánicos de estación.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-6" data-reveal="up">
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex align-items-center gap-3 border-bottom border-secondary border-opacity-25 pb-3 mb-3 zoom-host">
+                                <div class="rounded-circle overflow-hidden flex-shrink-0" style="width:64px;height:64px">
+                                    <img src="img/old-fashioned.jpg" alt="Old Fashioned" class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-baseline gap-2">
+                                        <h3 class="h6 mb-1">Old Fashioned</h3>
+                                        <span class="fw-bold text-warning">$11</span>
+                                    </div>
+                                    <p class="text-secondary small mb-0">Bourbon, angostura y azúcar, servido sobre hielo tallado.</p>
+                                </div>
+                            </li>
+
+                            <li class="d-flex align-items-center gap-3 border-bottom border-secondary border-opacity-25 pb-3 mb-3 zoom-host">
+                                <div class="rounded-circle overflow-hidden flex-shrink-0" style="width:64px;height:64px">
+                                    <img src="img/margarita.jpg" alt="Margarita" class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-baseline gap-2">
+                                        <h3 class="h6 mb-1">Margarita</h3>
+                                        <span class="fw-bold text-warning">$9</span>
+                                    </div>
+                                    <p class="text-secondary small mb-0">Tequila, triple sec y lima, con borde de sal marina.</p>
+                                </div>
+                            </li>
+
+                            <li class="d-flex align-items-center gap-3 zoom-host">
+                                <div class="rounded-circle overflow-hidden flex-shrink-0" style="width:64px;height:64px">
+                                    <img src="img/espresso-martini.jpg" alt="Espresso Martini" class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-baseline gap-2">
+                                        <h3 class="h6 mb-1">Espresso Martini</h3>
+                                        <span class="fw-bold text-warning">$12</span>
+                                    </div>
+                                    <p class="text-secondary small mb-0">Vodka, licor de café y espresso recién hecho.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================ GALERÍA ============================ -->
+        <section id="galeria" class="py-5 py-lg-6 bg-black" aria-labelledby="titulo-galeria">
+            <div class="container py-lg-4">
+
+                <div class="text-center mb-5">
+                    <p class="section-eyebrow mb-2">El ambiente</p>
+                    <h2 id="titulo-galeria" class="section-title section-title--center h1">Galería</h2>
+                </div>
+
+                <div class="row g-3 g-lg-4 mb-4 mb-lg-5">
+                    <div class="col-12 col-md-4">
+                        <div class="ratio ratio-4x3 rounded-3 overflow-hidden shadow position-relative zoom-host gallery-veil" data-reveal="up">
+                            <img src="img/cocteles-barra.jpg" alt="Cócteles servidos sobre la barra"
+                                class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="ratio ratio-4x3 rounded-3 overflow-hidden shadow position-relative zoom-host gallery-veil" data-reveal="up">
+                            <img src="img/about.jpg" alt="Ambiente del bar por la noche"
+                                class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="ratio ratio-4x3 rounded-3 overflow-hidden shadow position-relative zoom-host gallery-veil" data-reveal="up">
+                            <img src="img/amigos-brindando.jpg" alt="Amigos brindando en una mesa"
+                                class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carrusel de Bootstrap (reemplaza al carrusel hecho a mano) -->
+                <div id="carruselEspacio" class="carousel slide rounded-3 overflow-hidden shadow mx-auto"
+                    style="max-width:1000px" data-bs-ride="carousel">
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carruselEspacio" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Foto 1 del salón"></button>
+                        <button type="button" data-bs-target="#carruselEspacio" data-bs-slide-to="1"
+                            aria-label="Foto 2 del salón"></button>
+                        <button type="button" data-bs-target="#carruselEspacio" data-bs-slide-to="2"
+                            aria-label="Foto 3 del salón"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/bar_1.png" class="d-block w-100 carousel-frame" alt="Vista de la barra principal">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/bar_2.png" class="d-block w-100 carousel-frame" alt="Salón con mesas y luz cálida">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/bar_3.png" class="d-block w-100 carousel-frame" alt="Rincón de tragos de autor">
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carruselEspacio" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carruselEspacio" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================ EVENTOS ============================ -->
+        <section id="eventos" class="py-5 py-lg-6" aria-labelledby="titulo-eventos">
+            <div class="container py-lg-4">
+
+                <div class="text-center mb-5">
+                    <p class="section-eyebrow mb-2">Agenda</p>
+                    <h2 id="titulo-eventos" class="section-title section-title--center h1">Eventos Próximos</h2>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                    <div class="col">
+                        <article class="card card-lift card-accent-start h-100 overflow-hidden zoom-host" data-reveal="up">
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="img/jazz.jpg" alt="Banda de jazz tocando en vivo"
+                                    class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge text-bg-warning align-self-start mb-2 text-uppercase letter-spacing-1">Música en vivo</span>
+                                <h3 class="h5 mb-2">Noche de Jazz</h3>
+                                <p class="text-secondary small mt-auto mb-0">
+                                    <i class="fa-regular fa-calendar-days text-warning me-2"></i>
+                                    Viernes 15 de Noviembre · 21:00 hs
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="card card-lift card-accent-start h-100 overflow-hidden zoom-host" data-reveal="up">
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="img/vinos.jpg" alt="Copas de vino preparadas para una degustación"
+                                    class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge text-bg-warning align-self-start mb-2 text-uppercase letter-spacing-1">Degustación</span>
+                                <h3 class="h5 mb-2">Tasting de Vinos</h3>
+                                <p class="text-secondary small mt-auto mb-0">
+                                    <i class="fa-regular fa-calendar-days text-warning me-2"></i>
+                                    Sábado 16 de Noviembre · 19:00 hs
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="card card-lift card-accent-start h-100 overflow-hidden zoom-host" data-reveal="up">
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="img/dj.jpg" alt="DJ mezclando en cabina"
+                                    class="w-100 h-100 object-fit-cover img-zoom" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge text-bg-warning align-self-start mb-2 text-uppercase letter-spacing-1">Fiesta</span>
+                                <h3 class="h5 mb-2">DJ Set Especial</h3>
+                                <p class="text-secondary small mt-auto mb-0">
+                                    <i class="fa-regular fa-calendar-days text-warning me-2"></i>
+                                    Viernes 22 de Noviembre · 23:30 hs
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================ RESERVAS =========================== -->
+        <section id="reservas" class="py-5 py-lg-6 bg-black" aria-labelledby="titulo-reservas">
+            <div class="container py-lg-4">
+
+                <div class="text-center mb-5">
+                    <p class="section-eyebrow mb-2">Tu mesa te espera</p>
+                    <h2 id="titulo-reservas" class="section-title section-title--center h1">Reservas</h2>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Formulario de reserva -->
+                    <div class="col-12 col-lg-6">
+                        <div class="card h-100" data-reveal="left">
+                            <div class="card-body p-4">
+                                <h3 class="h4 text-warning mb-4">Hacé tu reserva</h3>
+
+                                <form action="#" method="post" novalidate>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="res-nombre">Nombre completo</label>
+                                        <input class="form-control" type="text" id="res-nombre" name="nombre"
+                                            placeholder="Ej. Juan Pérez" minlength="3" required>
+                                        <div class="invalid-feedback">Ingresá tu nombre (mínimo 3 caracteres).</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="res-telefono">Teléfono</label>
+                                        <input class="form-control" type="tel" id="res-telefono" name="telefono"
+                                            placeholder="Ej. 381 123 4567" pattern="[0-9 +-]{8,20}" required>
+                                        <div class="invalid-feedback">Ingresá un teléfono válido (8 a 20 dígitos).</div>
+                                    </div>
+
+                                    <div class="row g-3 mb-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="res-fecha">Fecha</label>
+                                            <input class="form-control" type="date" id="res-fecha" name="fecha" required>
+                                            <div class="invalid-feedback">Elegí una fecha.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="res-hora">Hora</label>
+                                            <input class="form-control" type="time" id="res-hora" name="hora"
+                                                min="18:00" max="23:59" required>
+                                            <div class="invalid-feedback">Elegí un horario entre las 18:00 y las 02:00.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="res-personas">Número de personas</label>
+                                        <select class="form-select" id="res-personas" name="personas" required>
+                                            <option value="" disabled selected>Seleccioná una opción</option>
+                                            <option value="1">1 persona</option>
+                                            <option value="2">2 personas</option>
+                                            <option value="3">3 personas</option>
+                                            <option value="4">4 personas</option>
+                                            <option value="5+">5 o más personas</option>
+                                        </select>
+                                        <div class="invalid-feedback">Indicá cuántas personas van a venir.</div>
+                                    </div>
+
+                                    <button class="btn btn-warning w-100 text-uppercase letter-spacing-1" type="submit">
+                                        Confirmar reserva
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reservas hechas + reseñas -->
+                    <div class="col-12 col-lg-6">
+                        <div class="row g-4">
+
+                            <div class="col-12">
+                                <div class="card" data-reveal="right">
+                                    <div class="card-body p-4">
+                                        <h3 class="h5 mb-3">Reservas hechas</h3>
+
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center px-0">
+                                                <div>
+                                                    <div class="mb-1">
+                                                        <i class="fa-regular fa-calendar-days text-warning me-2"></i>
+                                                        12 de Octubre, 2026 · 20:30
+                                                    </div>
+                                                    <div class="text-secondary small">
+                                                        <i class="fa-solid fa-user-group me-2"></i>4 personas
+                                                    </div>
+                                                </div>
+                                                <span class="badge text-bg-success rounded-pill">Confirmada</span>
+                                            </li>
+
+                                            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center px-0 pb-0">
+                                                <div>
+                                                    <div class="mb-1">
+                                                        <i class="fa-regular fa-calendar-days text-warning me-2"></i>
+                                                        15 de Octubre, 2026 · 19:00
+                                                    </div>
+                                                    <div class="text-secondary small">
+                                                        <i class="fa-solid fa-user-group me-2"></i>2 personas
+                                                    </div>
+                                                </div>
+                                                <span class="badge text-bg-success rounded-pill">Confirmada</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="card" data-reveal="right">
+                                    <div class="card-body p-4">
+                                        <h3 class="h5 mb-3">Reseñas de clientes</h3>
+
+                                        <div class="d-flex border-bottom border-secondary border-opacity-25 pb-3 mb-3">
+                                            <div class="rounded-circle bg-warning text-dark fw-bold d-flex align-items-center justify-content-center flex-shrink-0"
+                                                style="width:40px;height:40px" aria-hidden="true">M</div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h4 class="h6 mb-0">María Gómez</h4>
+                                                <div class="text-warning small mb-2" aria-label="5 de 5 estrellas">★★★★★</div>
+                                                <p class="text-secondary small fst-italic mb-0">
+                                                    "Excelente servicio y un ambiente espectacular. La comida estaba deliciosa."
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <div class="rounded-circle bg-warning text-dark fw-bold d-flex align-items-center justify-content-center flex-shrink-0"
+                                                style="width:40px;height:40px" aria-hidden="true">C</div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h4 class="h6 mb-0">Carlos Ruiz</h4>
+                                                <div class="text-warning small mb-2" aria-label="4 de 5 estrellas">★★★★☆</div>
+                                                <p class="text-secondary small fst-italic mb-0">
+                                                    "Muy buena atención por parte del personal. Hice la reserva en línea y salió todo perfecto."
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================ CONTACTO =========================== -->
+        <section id="contacto" class="py-5 py-lg-6" aria-labelledby="titulo-contacto">
+            <div class="container py-lg-4">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-9 col-xl-8">
+
+                        <div class="card shadow-lg" data-reveal="up">
+                            <div class="card-body p-4 p-md-5">
+
+                                <div class="text-center mb-4">
+                                    <p class="section-eyebrow mb-2">Eventos privados</p>
+                                    <h2 id="titulo-contacto" class="section-title section-title--center h2">Contacto</h2>
+                                    <p class="text-secondary mt-3 mb-0">
+                                        Escribinos para cumpleaños, after office o cualquier celebración especial.
+                                    </p>
+                                </div>
+
+                                <form action="#" method="post" novalidate>
+                                    <fieldset class="border-0 p-0 m-0">
+                                        <legend class="visually-hidden">Datos de contacto</legend>
+
+                                        <div class="row g-3">
+                                            <div class="col-12">
+                                                <label class="form-label" for="con-nombre">
+                                                    Nombre completo <span class="text-warning" aria-hidden="true">*</span>
+                                                </label>
+                                                <input class="form-control" type="text" id="con-nombre" name="nombre"
+                                                    placeholder="Ej. Juan Pérez" autocomplete="name" minlength="3" required>
+                                                <div class="invalid-feedback">Ingresá tu nombre (mínimo 3 caracteres).</div>
+                                            </div>
+
+                                            <div class="col-12 col-md-6">
+                                                <label class="form-label" for="con-email">
+                                                    Correo electrónico <span class="text-warning" aria-hidden="true">*</span>
+                                                </label>
+                                                <input class="form-control" type="email" id="con-email" name="email"
+                                                    placeholder="tu@email.com" autocomplete="email" required>
+                                                <div class="invalid-feedback">Ingresá un correo electrónico válido.</div>
+                                            </div>
+
+                                            <div class="col-12 col-md-6">
+                                                <label class="form-label" for="con-telefono">
+                                                    Teléfono <span class="text-warning" aria-hidden="true">*</span>
+                                                </label>
+                                                <input class="form-control" type="tel" id="con-telefono" name="telefono"
+                                                    placeholder="Ej. 3811234567" pattern="[0-9]{8,15}" required>
+                                                <div class="invalid-feedback">Sólo números, entre 8 y 15 dígitos.</div>
+                                            </div>
+
+                                            <div class="col-12 col-md-6">
+                                                <label class="form-label" for="con-fecha">Fecha del evento</label>
+                                                <input class="form-control" type="date" id="con-fecha" name="fecha">
+                                            </div>
+
+                                            <div class="col-12 col-md-6">
+                                                <label class="form-label" for="con-invitados">Invitados estimados</label>
+                                                <input class="form-control" type="number" id="con-invitados"
+                                                    name="invitados" min="1" max="200" placeholder="Ej. 25">
+                                                <div class="invalid-feedback">Ingresá un número entre 1 y 200.</div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label class="form-label" for="con-mensaje">Mensaje o pedidos especiales</label>
+                                                <textarea class="form-control" id="con-mensaje" name="mensaje" rows="4"
+                                                    placeholder="¿Algún requerimiento dietético o celebración especial?"></textarea>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <div class="d-grid d-sm-flex justify-content-sm-center mt-4">
+                                        <button class="btn btn-warning btn-lg px-5 text-uppercase letter-spacing-1" type="submit">
+                                            Enviar consulta
+                                        </button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================================= FOOTER ================================ -->
+    <footer class="bg-black border-top border-secondary border-opacity-25 pt-5 mt-auto">
+        <div class="container">
+
+            <div class="row g-4 g-lg-5 pb-5">
+
+                <div class="col-12 col-lg-4">
+                    <h2 class="h3 mb-1 text-uppercase">Los Amigos</h2>
+                    <p class="section-eyebrow mb-3">· Bar ·</p>
+                    <p class="text-secondary small">
+                        Un lugar donde la buena vibra, los tragos y los amigos se encuentran. Te esperamos.
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" aria-label="Instagram"
+                            class="d-flex align-items-center justify-content-center rounded-circle border border-warning text-warning text-decoration-none hover-gold"
+                            style="width:40px;height:40px"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"
+                            class="d-flex align-items-center justify-content-center rounded-circle border border-warning text-warning text-decoration-none hover-gold"
+                            style="width:40px;height:40px"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="WhatsApp"
+                            class="d-flex align-items-center justify-content-center rounded-circle border border-warning text-warning text-decoration-none hover-gold"
+                            style="width:40px;height:40px"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h3 class="section-eyebrow mb-3">Enlaces</h3>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small mb-0">
+                        <li><a href="#inicio" class="text-secondary text-decoration-none hover-gold">Inicio</a></li>
+                        <li><a href="#nosotros" class="text-secondary text-decoration-none hover-gold">Nosotros</a></li>
+                        <li><a href="#carta" class="text-secondary text-decoration-none hover-gold">Carta</a></li>
+                        <li><a href="#cocteles" class="text-secondary text-decoration-none hover-gold">Cócteles</a></li>
+                        <li><a href="#galeria" class="text-secondary text-decoration-none hover-gold">Galería</a></li>
+                        <li><a href="#eventos" class="text-secondary text-decoration-none hover-gold">Eventos</a></li>
+                        <li><a href="#reservas" class="text-secondary text-decoration-none hover-gold">Reservas</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h3 class="section-eyebrow mb-3">Horarios</h3>
+                    <ul class="list-unstyled small text-secondary mb-0">
+                        <li class="d-flex gap-2 mb-2">
+                            <i class="fa-regular fa-clock text-warning mt-1"></i>
+                            <span>Martes a Domingo<br>18:00 - 02:00</span>
+                        </li>
+                        <li class="d-flex gap-2">
+                            <i class="fa-solid fa-ban text-warning mt-1"></i>
+                            <span>Lunes<br>Cerrado</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <h3 class="section-eyebrow mb-3">Contacto</h3>
+                    <address class="fst-normal small text-secondary mb-4">
+                        <div class="d-flex gap-2 mb-2">
+                            <i class="fa-solid fa-location-dot text-warning mt-1"></i>
+                            <span>Av. Siempre Viva 123,<br>San Miguel de Tucumán</span>
+                        </div>
+                        <div class="d-flex gap-2 mb-2">
+                            <i class="fa-solid fa-phone text-warning mt-1"></i>
+                            <a href="tel:+543811234567" class="text-secondary text-decoration-none hover-gold">381 123 4567</a>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <i class="fa-regular fa-envelope text-warning mt-1"></i>
+                            <a href="mailto:hola@losamigosbar.com.ar" class="text-secondary text-decoration-none hover-gold">hola@losamigosbar.com.ar</a>
+                        </div>
+                    </address>
+
+                    <h3 class="section-eyebrow mb-3">Newsletter</h3>
+                    <p class="text-secondary small">Suscribite y enterate de eventos y promociones exclusivas.</p>
+                    <form action="#" method="post" class="row g-2">
+                        <div class="col-12 col-sm-7">
+                            <label class="visually-hidden" for="newsletter-email">Tu correo electrónico</label>
+                            <input class="form-control form-control-sm" type="email" id="newsletter-email"
+                                name="email" placeholder="Tu e-mail" required>
+                        </div>
+                        <div class="col-12 col-sm-5">
+                            <button class="btn btn-warning btn-sm w-100 text-uppercase letter-spacing-1" type="submit">
+                                Suscribirme
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="border-top border-secondary border-opacity-25 py-4 text-center small text-secondary">
+                <p class="mb-0">&copy; 2026 Los Amigos Bar. Todos los derechos reservados.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap local: navbar colapsable, carrusel y scrollspy -->
+    <script src="bootstrap.bundle.min.js"></script>
+
+    <!-- Animaciones de entrada y parallax -->
+    <script src="main.js"></script>
+</body>
+
+</html>

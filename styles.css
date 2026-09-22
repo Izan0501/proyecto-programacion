@@ -216,11 +216,32 @@ h1, h2, h3,
             rgba(15, 15, 16, 0.55) 0%,
             rgba(15, 15, 16, 0.80) 60%,
             var(--brand-bg) 100%),
-        url('../img/bar_background.jpg');
+        url('img/bar_background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 88vh;
+
+    /* Mobile: sin alto forzado. Encima de este hero ya estan la barra
+       superior y el navbar ocupando su propio espacio en flujo normal (no
+       flotan por encima), y no hay forma fiable de restarles su alto: la
+       barra superior puede pasar a dos lineas en pantallas angostas. Con
+       88-100vh fijos, esa suma superaba el alto real de la ventana en casi
+       cualquier celular y los botones quedaban debajo del pliegue, visibles
+       solo haciendo scroll. Dejando el alto libre, el <div class="container
+       py-5"> de adentro define el alto segun su propio contenido y nunca
+       queda nada oculto. */
+}
+
+/* Desktop / tablet: la barra superior y el navbar miden siempre una sola
+   linea, asi que hay margen de sobra para el efecto de hero a pantalla
+   completa. "svh" es el alto visible garantizado (sin la barra del
+   navegador, que en mobile puede ocultarse o aparecer); "vh" antes queda
+   de respaldo para navegadores que todavia no soportan svh. */
+@media (min-width: 768px) {
+    .hero {
+        min-height: 90vh;
+        min-height: 90svh;
+    }
 }
 
 /* El parallax por background-attachment se rompe en iOS: sólo en desktop */
@@ -372,14 +393,6 @@ h1, h2, h3,
 /* --------------------------------------------------------------------------
    A9. Utilidades que Bootstrap no provee
    -------------------------------------------------------------------------- */
-/* Escala de espaciado extendida: Bootstrap llega hasta 5 (3rem) y las
-   secciones necesitan un respiro mayor en pantallas grandes. */
-.py-lg-6 { padding-top: 3rem; padding-bottom: 3rem; }
-
-@media (min-width: 992px) {
-    .py-lg-6 { padding-top: 6rem; padding-bottom: 6rem; }
-}
-
 /* Los anclas del menú no deben quedar tapadas por la navbar sticky */
 html {
     scroll-behavior: smooth;
@@ -412,18 +425,6 @@ html {
     opacity: 1;
     background: linear-gradient(to right,
         transparent, var(--brand-gold), transparent);
-}
-
-/* Altura fija de las diapositivas del carrusel */
-.carousel-frame {
-    height: 420px;
-    object-fit: cover;
-}
-
-@media (max-width: 767.98px) {
-    .carousel-frame {
-        height: 260px;
-    }
 }
 
 /* Indicadores del carrusel en dorado */

@@ -8,26 +8,19 @@ instalación.
 
 ## Cómo verlo
 
-Doble clic en `index.html`. Bootstrap está incluido en el proyecto, así que
-funciona sin conexión y sin servidor.
+Doble clic en `index.html`. No hace falta servidor ni instalar nada.
 
-También podés servirlo con:
-
-```bash
-python3 -m http.server 8000
-```
-
-y abrir `http://localhost:8000`.
+Bootstrap, las tipografías y los iconos se cargan por CDN, así que hace
+falta conexión a internet para verlo con estilos.
 
 ## Estructura
 
 ```
 .
 ├── index.html
-├── styles.css                # estilos propios
-├── main.js                   # animaciones
-├── bootstrap.min.css         # Bootstrap (copia local)
-├── bootstrap.bundle.min.js   # Bootstrap JS (copia local)
+├── styles.css     # estilos propios
+├── main.js        # animaciones
+├── favicon.svg
 └── img/
 ```
 

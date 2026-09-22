@@ -18,15 +18,19 @@
     <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Bootstrap 5.3.3, copia local.
-         Va local y SIN integrity/crossorigin a proposito: Safari bloquea los
-         recursos con Subresource Integrity cuando la pagina se abre con
-         file:// (origen opaco) y la pagina quedaba sin estilos al abrir el
-         index con doble clic. Asi tambien funciona sin conexion. -->
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- Bootstrap 5.3.3 (CDN).
+         Sin integrity/crossorigin a proposito: Safari bloquea los recursos
+         con Subresource Integrity cuando la pagina se abre con file://
+         (origen opaco), y la pagina quedaba sin estilos al abrir el index
+         con doble clic. Sin SRI no hay ese problema. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
     <!-- Hoja de estilos propia (ultima, para poder pisar a Bootstrap) -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon propio: sin esto el navegador pide /favicon.ico solo,
+         no lo encuentra y tira un 404 (favicon.ico:1) en la consola. -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body class="d-flex flex-column min-vh-100" data-bs-spy="scroll" data-bs-target="#navPrincipal" data-bs-root-margin="0px 0px -55%">
@@ -61,7 +65,7 @@
     </div>
 
     <!-- ================================ NAVBAR ================================= -->
-    <nav class="navbar navbar-expand-lg navbar-glass sticky-top border-bottom border-secondary border-opacity-25">
+    <nav class="navbar navbar-expand-xl navbar-glass sticky-top border-bottom border-secondary border-opacity-25">
         <div class="container py-1">
 
             <a class="navbar-brand d-flex align-items-center gap-2 text-uppercase fw-bold" href="#">
@@ -124,14 +128,14 @@
                 </div>
             </div>
 
-            <a href="#nosotros" class="hero__scroll-cue position-absolute bottom-0 mb-4 text-secondary fs-4 text-decoration-none"
+            <a href="#nosotros" class="hero__scroll-cue d-none d-md-inline-flex position-absolute bottom-0 mb-4 text-secondary fs-4 text-decoration-none"
                 aria-label="Ir a la siguiente sección">
                 <i class="fa-solid fa-chevron-down"></i>
             </a>
         </header>
 
         <!-- =============================== NOSOTROS ============================ -->
-        <section id="nosotros" class="py-5 py-lg-6" aria-labelledby="titulo-nosotros">
+        <section id="nosotros" class="py-5" aria-labelledby="titulo-nosotros">
             <div class="container py-lg-4">
                 <div class="row align-items-center g-4 g-lg-5">
 
@@ -180,7 +184,7 @@
         </section>
 
         <!-- ============================ CARTA DE COMIDA ======================== -->
-        <section id="carta" class="py-5 py-lg-6 bg-black" aria-labelledby="titulo-carta">
+        <section id="carta" class="py-5 bg-black" aria-labelledby="titulo-carta">
             <div class="container py-lg-4">
 
                 <div class="text-center mb-5">
@@ -303,7 +307,7 @@
         </section>
 
         <!-- ========================== CÓCTELES DESTACADOS ====================== -->
-        <section id="cocteles" class="py-5 py-lg-6" aria-labelledby="titulo-cocteles">
+        <section id="cocteles" class="py-5" aria-labelledby="titulo-cocteles">
             <div class="container py-lg-4">
 
                 <div class="text-center mb-5">
@@ -404,7 +408,7 @@
         </section>
 
         <!-- ================================ GALERÍA ============================ -->
-        <section id="galeria" class="py-5 py-lg-6 bg-black" aria-labelledby="titulo-galeria">
+        <section id="galeria" class="py-5 bg-black" aria-labelledby="titulo-galeria">
             <div class="container py-lg-4">
 
                 <div class="text-center mb-5">
@@ -448,13 +452,19 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/bar_1.png" class="d-block w-100 carousel-frame" alt="Vista de la barra principal">
+                            <div class="ratio ratio-21x9">
+                                <img src="img/bar_1.png" class="object-fit-cover" alt="Vista de la barra principal">
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/bar_2.png" class="d-block w-100 carousel-frame" alt="Salón con mesas y luz cálida">
+                            <div class="ratio ratio-21x9">
+                                <img src="img/bar_2.png" class="object-fit-cover" alt="Salón con mesas y luz cálida">
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/bar_3.png" class="d-block w-100 carousel-frame" alt="Rincón de tragos de autor">
+                            <div class="ratio ratio-21x9">
+                                <img src="img/bar_3.png" class="object-fit-cover" alt="Rincón de tragos de autor">
+                            </div>
                         </div>
                     </div>
 
@@ -472,7 +482,7 @@
         </section>
 
         <!-- ================================ EVENTOS ============================ -->
-        <section id="eventos" class="py-5 py-lg-6" aria-labelledby="titulo-eventos">
+        <section id="eventos" class="py-5" aria-labelledby="titulo-eventos">
             <div class="container py-lg-4">
 
                 <div class="text-center mb-5">
@@ -538,7 +548,7 @@
         </section>
 
         <!-- ================================ RESERVAS =========================== -->
-        <section id="reservas" class="py-5 py-lg-6 bg-black" aria-labelledby="titulo-reservas">
+        <section id="reservas" class="py-5 bg-black" aria-labelledby="titulo-reservas">
             <div class="container py-lg-4">
 
                 <div class="text-center mb-5">
@@ -684,7 +694,7 @@
         </section>
 
         <!-- ================================ CONTACTO =========================== -->
-        <section id="contacto" class="py-5 py-lg-6" aria-labelledby="titulo-contacto">
+        <section id="contacto" class="py-5" aria-labelledby="titulo-contacto">
             <div class="container py-lg-4">
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-9 col-xl-8">
@@ -834,7 +844,7 @@
                         </div>
                         <div class="d-flex gap-2">
                             <i class="fa-regular fa-envelope text-warning mt-1"></i>
-                            <a href="mailto:hola@losamigosbar.com.ar" class="text-secondary text-decoration-none hover-gold">hola@losamigosbar.com.ar</a>
+                            <a href="mailto:hola@losamigosbar.com.ar" class="text-secondary text-decoration-none hover-gold text-break">hola@losamigosbar.com.ar</a>
                         </div>
                     </address>
 
@@ -863,8 +873,8 @@
         </div>
     </footer>
 
-    <!-- Bootstrap local: navbar colapsable, carrusel y scrollspy -->
-    <script src="bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5.3.3 (CDN): navbar colapsable, carrusel y scrollspy -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Animaciones de entrada y parallax -->
     <script src="main.js"></script>
